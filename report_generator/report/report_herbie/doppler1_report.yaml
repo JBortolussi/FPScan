@@ -1,0 +1,85 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_14 = _x_12 + _x_13
+  - - None
+    - absorption _x_12 _x_13
+- - File "none", line 1, characters 1-0
+  - _x_4 = _x_2 + _x_3
+  - - None
+    - absorption _x_2 _x_3
+- - File "none", line 1, characters 1-0
+  - _x_9 = _x_5 + _x_8
+  - - absorption _x_8 _x_5
+    - None
+- - File "none", line 1, characters 1-0
+  - u = Rand (-100, 100)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = -3/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - v = Rand (20, 20000)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = _x_7 + u
+  - - absorption _x_7 u
+    - cancellation
+    - absorption u _x_7
+- - File "none", line 1, characters 1-0
+  - _x_20 = _x_10 + _x_19
+  - - None
+    - absorption _x_10 _x_19
+- - File "none", line 1, characters 1-0
+  - _x_21 = _x_4 / _x_20
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = 6/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_15 = 3/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = 3314/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_19 = _x_14 * _x_18
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_13 = 1657/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_12 = T * _x_11
+  - - None
+- - File "none", line 1, characters 1-0
+  - T = Rand (-30, 50)
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = v * _x_21
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_10 = u * _x_9
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_7 = T * _x_6
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_17 = 1657/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = -1657/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_11 = 3/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_18 = _x_16 + _x_17
+  - - absorption _x_16 _x_17
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = T * _x_1
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_16 = T * _x_15
+  - - None
+sanity_check: true
+time: 0.052798408000000005

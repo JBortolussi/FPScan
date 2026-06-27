@@ -1,0 +1,21 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_1 = x + y
+  - - None
+    - absorption x y
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_1 / _x_2
+  - - None
+- - File "none", line 1, characters 1-0
+  - x = Rand (0, 1)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = x - y
+  - - absorption x y
+    - None
+- - File "none", line 1, characters 1-0
+  - y = Rand (-1, -1/10)
+  - - None
+sanity_check: true
+time: 0.322602779

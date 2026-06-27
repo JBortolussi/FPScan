@@ -1,0 +1,9 @@
+real y,i,ny;
+y = 0.;
+
+while (0. < 1.) {
+read_input(i);
+read_state(y);
+ny = 2.0*y+i;
+y = ny;
+}

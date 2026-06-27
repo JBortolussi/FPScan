@@ -1,0 +1,48 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_9 = x * y
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = x * y
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = x * y
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_11 = _x_9 + _x_10
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = _x_7 * x
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_10 = -1
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = -1
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = _x_4 + _x_5
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_3 / _x_12
+  - - None
+- - File "none", line 1, characters 1-0
+  - y = Rand (1001/1000, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = _x_1 + _x_2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_7 = y * _x_6
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = -1
+  - - None
+- - File "none", line 1, characters 1-0
+  - x = Rand (1001/1000, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_12 = _x_8 + _x_11
+  - - None
+sanity_check: true
+time: 0.05739571

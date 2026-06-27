@@ -1,0 +1,21 @@
+int __intloopcounter_2, time, x;
+bool __intloopcounter_3, out;
+
+x = rand_int(-1, 1);
+__intloopcounter_3 = (3 - __intloopcounter_2) == 0;
+
+time = 0;
+out = (2 - time) == 0;
+__intloopcounter_2 = time;
+while (1>0) {
+  x = rand_int(-1, 1);
+  __intloopcounter_3 = (3 - __intloopcounter_2) == 0;
+
+  if (__intloopcounter_3) {
+    time = 0;
+  } else {
+    time = __intloopcounter_2 + 1;
+  }
+  out = (2 - time) == 0;
+  __intloopcounter_2 = time;
+}

@@ -1,0 +1,146 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_30 = _x_29 * x5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = _x_7 + x6
+  - - absorption _x_7 x6
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_24 = _x_18 * _x_23
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_36 = _x_35 * x6
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_33 = _x_32 * x6
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_15 = _x_14 + x6
+  - - None
+    - absorption _x_14 x6
+- - File "none", line 1, characters 1-0
+  - _x_7 = _x_6 + x5
+  - - absorption _x_6 x5
+    - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_14 = _x_13 - x5
+  - - cancellation
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_12 = _x_11 + x3
+  - - None
+    - absorption _x_11 x3
+- - File "none", line 1, characters 1-0
+  - _x_31 = _x_28 - _x_30
+  - - absorption _x_28 _x_30
+    - cancellation
+    - None
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_34 - _x_36
+  - - absorption _x_34 _x_36
+    - cancellation
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = _x_5 - x4
+  - - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_35 = x4 * x5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = - x1
+  - - None
+- - File "none", line 1, characters 1-0
+  - x2 = Rand (4, 159/25)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_10 = x2 * x5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_27 = _x_26 * x4
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_19 = x1 + x2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_9 = _x_1 * _x_8
+  - - None
+- - File "none", line 1, characters 1-0
+  - x6 = Rand (4, 159/25)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_21 = _x_20 + x4
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_11 = x1 - x2
+  - - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_32 = x1 * x2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = _x_3 + x2
+  - - cancellation
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = _x_4 + x3
+  - - absorption _x_4 x3
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_29 = x1 * x3
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_13 = _x_12 + x4
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_16 = _x_10 * _x_15
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = x1 * x4
+  - - None
+- - File "none", line 1, characters 1-0
+  - x1 = Rand (4, 159/25)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_20 = _x_19 - x3
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_26 = x2 * x3
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_17 = _x_9 + _x_16
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_34 = _x_31 - _x_33
+  - - None
+    - absorption _x_31 _x_33
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_28 = _x_25 - _x_27
+  - - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_22 = _x_21 + x5
+  - - None
+- - File "none", line 1, characters 1-0
+  - x3 = Rand (4, 159/25)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_18 = x3 * x6
+  - - None
+- - File "none", line 1, characters 1-0
+  - x4 = Rand (4, 159/25)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_25 = _x_17 + _x_24
+  - - None
+- - File "none", line 1, characters 1-0
+  - x5 = Rand (4, 159/25)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_23 = _x_22 - x6
+  - - None
+sanity_check: true
+time: 0.223123744

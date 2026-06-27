@@ -1,0 +1,164 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_33 = x6 - _x_32
+  - - absorption x6 _x_32
+    - cancellation
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_23 = x4 - _x_22
+  - - None
+    - absorption x4 _x_22
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_24 = _x_21 * _x_23
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_11 = x2 - _x_10
+  - - cancellation
+    - absorption x2 _x_10
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_35 = x6 - _x_34
+  - - None
+    - absorption x6 _x_34
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_21 = x4 - _x_20
+  - - absorption x4 _x_20
+    - cancellation
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = x1 - _x_4
+  - - absorption x1 _x_4
+    - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_13 = _x_7 - _x_12
+  - - absorption _x_7 _x_12
+    - cancellation
+    - absorption _x_12 _x_7
+- - File "none", line 1, characters 1-0
+  - _x_28 = 1
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_25 = _x_19 - _x_24
+  - - absorption _x_24 _x_19
+    - absorption _x_19 _x_24
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_3 = x1 - _x_2
+  - - cancellation
+    - None
+    - absorption x1 _x_2
+- - File "none", line 1, characters 1-0
+  - _x_18 = _x_15 * _x_17
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_31 - _x_36
+  - - absorption _x_31 _x_36
+    - absorption _x_36 _x_31
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_29 = x5 - _x_28
+  - - cancellation
+    - absorption x5 _x_28
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_31 = _x_25 - _x_30
+  - - cancellation
+    - absorption _x_30 _x_25
+    - absorption _x_25 _x_30
+- - File "none", line 1, characters 1-0
+  - _x_19 = _x_13 - _x_18
+  - - cancellation
+    - absorption _x_13 _x_18
+    - absorption _x_18 _x_13
+- - File "none", line 1, characters 1-0
+  - _x_27 = x5 - _x_26
+  - - absorption x5 _x_26
+    - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_9 = x2 - _x_8
+  - - None
+    - cancellation
+    - absorption x2 _x_8
+- - File "none", line 1, characters 1-0
+  - x2 = Rand (0, 6)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_15 = x3 - _x_14
+  - - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - x5 = Rand (0, 6)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_7 = _x_1 * _x_6
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_34 = 4
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = 2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_12 = _x_9 * _x_11
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_17 = x3 - _x_16
+  - - cancellation
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = _x_3 * _x_5
+  - - None
+- - File "none", line 1, characters 1-0
+  - x4 = Rand (0, 6)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x3 = Rand (1, 5)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_32 = 4
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_14 = 1
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = -25
+  - - None
+- - File "none", line 1, characters 1-0
+  - x6 = Rand (0, 10)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = 2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_20 = 4
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_22 = 4
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_36 = _x_33 * _x_35
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_30 = _x_27 * _x_29
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_10 = 2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_16 = 1
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_26 = 1
+  - - None
+- - File "none", line 1, characters 1-0
+  - x1 = Rand (0, 6)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = 2
+  - - None
+sanity_check: true
+time: 0.181759538

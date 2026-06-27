@@ -1,0 +1,90 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_8 - _x_16
+  - - absorption _x_8 _x_16
+    - absorption _x_16 _x_8
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_16 = _x_10 + _x_15
+  - - absorption _x_10 _x_15
+    - absorption _x_15 _x_10
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_15 = _x_12 + _x_14
+  - - absorption _x_12 _x_14
+    - absorption _x_14 _x_12
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_14 = a * _x_13
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_13 = f * h
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_12 = i * _x_11
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_11 = b * d
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_10 = e * _x_9
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_9 = c * g
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_8 = _x_2 + _x_7
+  - - absorption _x_2 _x_7
+    - absorption _x_7 _x_2
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_7 = _x_4 + _x_6
+  - - absorption _x_4 _x_6
+    - absorption _x_6 _x_4
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_6 = c * _x_5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_5 = d * h
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_4 = g * _x_3
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_3 = b * f
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = a * _x_1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_1 = e * i
+  - []
+- - File "none", line 1, characters 1-0
+  - a = Rand (-10, 10)
+  - []
+- - File "none", line 1, characters 1-0
+  - b = Rand (-10, 10)
+  - []
+- - File "none", line 1, characters 1-0
+  - c = Rand (-10, 10)
+  - []
+- - File "none", line 1, characters 1-0
+  - d = Rand (-10, 10)
+  - []
+- - File "none", line 1, characters 1-0
+  - e = Rand (-10, 10)
+  - []
+- - File "none", line 1, characters 1-0
+  - f = Rand (-10, 10)
+  - []
+- - File "none", line 1, characters 1-0
+  - g = Rand (-10, 10)
+  - []
+- - File "none", line 1, characters 1-0
+  - h = Rand (-10, 10)
+  - []
+- - File "none", line 1, characters 1-0
+  - i = Rand (-10, 10)
+  - []

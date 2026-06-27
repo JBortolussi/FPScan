@@ -1,0 +1,1 @@
+(FPCore (v) :herbie-status ex-start :herbie-time 4082.6884765625 :herbie-error-input ((256 0.4596863281475362) (8000 0.4397981218870801)) :herbie-error-output ((256 0.06640625) (8000 0.094125)) :name "carbonGas" :precision binary64 :pre (and (<= 0.1 v) (<= v 0.5)) (fma v 35000000.0 (fma (fma v 401000.0 -17122.7) (/ 1.0 (* v v)) -1494500.0)))

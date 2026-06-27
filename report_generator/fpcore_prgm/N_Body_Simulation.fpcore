@@ -1,0 +1,48 @@
+(FPCore
+ (x0 y0 z0 vx0 vy0 vz0)
+ :name
+ "N_Body_Simulation"
+ :fpbench-domain
+ science
+ :pre
+ (and (< -6 x0 6)
+      (< -6 y0 6)
+      (< -1/5 z0 1/5)
+      (< -3 vx0 3)
+      (< -3 vy0 3)
+      (< -1/10 vz0 1/10))
+ (let ((dt 1/10) (solarMass 3947841760435743/100000000000000))
+   (while
+    (< i 100)
+    ((x
+      x0
+      (let ((distance (sqrt (+ (+ (* x x) (* y y)) (* z z)))))
+        (let ((mag (/ dt (* (* distance distance) distance))))
+          (let ((vxNew (- vx (* (* x solarMass) mag)))) (+ x (* dt vxNew))))))
+     (y
+      y0
+      (let ((distance (sqrt (+ (+ (* x x) (* y y)) (* z z)))))
+        (let ((mag (/ dt (* (* distance distance) distance))))
+          (let ((vyNew (- vy (* (* y solarMass) mag)))) (+ y (* dt vyNew))))))
+     (z
+      z0
+      (let ((distance (sqrt (+ (+ (* x x) (* y y)) (* z z)))))
+        (let ((mag (/ dt (* (* distance distance) distance))))
+          (let ((vzNew (- vz (* (* z solarMass) mag)))) (+ z (* dt vzNew))))))
+     (vx
+      vx0
+      (let ((distance (sqrt (+ (+ (* x x) (* y y)) (* z z)))))
+        (let ((mag (/ dt (* (* distance distance) distance))))
+          (- vx (* (* x solarMass) mag)))))
+     (vy
+      vy0
+      (let ((distance (sqrt (+ (+ (* x x) (* y y)) (* z z)))))
+        (let ((mag (/ dt (* (* distance distance) distance))))
+          (- vy (* (* y solarMass) mag)))))
+     (vz
+      vz0
+      (let ((distance (sqrt (+ (+ (* x x) (* y y)) (* z z)))))
+        (let ((mag (/ dt (* (* distance distance) distance))))
+          (- vz (* (* z solarMass) mag)))))
+     (i 0 (+ i 1)))
+    x)))

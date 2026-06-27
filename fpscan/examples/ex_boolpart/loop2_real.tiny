@@ -1,0 +1,8 @@
+real x;
+bool cond;
+x = rand_real(0.,8.);
+cond = x < 10.;
+while (x<20.0) {
+ cond = x < 10.0;
+ x = x + 1.0;
+}

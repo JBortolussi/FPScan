@@ -1,0 +1,176 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_4 + _x_41
+  - - None
+    - absorption _x_41 _x_4
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_41 = _x_10 + _x_40
+  - - None
+    - absorption _x_40 _x_10
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_40 = _x_17 + _x_39
+  - - None
+    - absorption _x_39 _x_17
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_39 = _x_24 + _x_38
+  - - None
+    - absorption _x_38 _x_24
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_38 = x3 * _x_37
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_37 = _x_27 + _x_36
+  - - None
+    - absorption _x_36 _x_27
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_36 = _x_32 + _x_35
+  - - None
+    - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_35 = x4 * _x_34
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_34 = - x2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_32 = x6 * _x_31
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_31 = x1 + _x_30
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_30 = x2 - _x_29
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_29 = x6 - _x_28
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_28 = x4 + x5
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_27 = _x_26 * x6
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_26 = - x3
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_24 = x2 * _x_23
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_23 = x5 * _x_22
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_22 = _x_19 + _x_21
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_21 = x6 + _x_20
+  - - None
+    - absorption _x_20 x6
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_20 = x4 - x5
+  - - None
+    - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_19 = x3 + _x_18
+  - - None
+    - absorption _x_18 x3
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_18 = x1 - x2
+  - - None
+    - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_17 = x1 * _x_16
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_16 = x4 * _x_15
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_15 = _x_13 + _x_14
+  - - absorption _x_13 _x_14
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_14 = x6 + x5
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_13 = _x_11 + _x_12
+  - - absorption _x_11 _x_12
+    - absorption _x_12 _x_11
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_12 = x3 - x4
+  - - None
+    - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_11 = x2 - x1
+  - - None
+    - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_10 = _x_6 * _x_9
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_9 = _x_7 + _x_8
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = x6 * x2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_7 = x3 * x5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_6 = - x1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_4 = _x_3 * x5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_3 = x6 * _x_2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = - x4
+  - []
+- - File "none", line 1, characters 1-0
+  - x1 = Rand (4, 3969/625)
+  - []
+- - File "none", line 1, characters 1-0
+  - x2 = Rand (4, 3969/625)
+  - []
+- - File "none", line 1, characters 1-0
+  - x3 = Rand (4, 3969/625)
+  - []
+- - File "none", line 1, characters 1-0
+  - x4 = Rand (4, 3969/625)
+  - []
+- - File "none", line 1, characters 1-0
+  - x5 = Rand (4, 3969/625)
+  - []
+- - File "none", line 1, characters 1-0
+  - x6 = Rand (4, 3969/625)
+  - []

@@ -1,0 +1,78 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_19 = _x_4 / _x_18
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = T * _x_5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_10 = _x_8 + _x_9
+  - - absorption _x_8 _x_9
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_16 = u + _x_15
+  - - None
+    - absorption u _x_15
+- - File "none", line 1, characters 1-0
+  - _x_4 = _x_2 + _x_3
+  - - None
+    - absorption _x_2 _x_3
+- - File "none", line 1, characters 1-0
+  - _x_1 = -3/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_11 = _x_6 + _x_10
+  - - None
+    - absorption _x_6 _x_10
+- - File "none", line 1, characters 1-0
+  - _x_14 = u + _x_13
+  - - absorption u _x_13
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = u * _x_7
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_13 = 1657/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_12 = T * _x_11
+  - - None
+- - File "none", line 1, characters 1-0
+  - u = Rand (-125, 125)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_9 = 9942/25
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = 9/25
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_7 = 6/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - T = Rand (-40, 60)
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = v * _x_19
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_17 = _x_14 * _x_16
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = -1657/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_18 = _x_12 + _x_17
+  - - None
+    - absorption _x_12 _x_17
+- - File "none", line 1, characters 1-0
+  - _x_15 = 1657/5
+  - - None
+- - File "none", line 1, characters 1-0
+  - v = Rand (15, 25000)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = T * _x_1
+  - - None
+sanity_check: true
+time: 0.06711365700000001

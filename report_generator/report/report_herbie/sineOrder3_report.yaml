@@ -1,0 +1,25 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_5 = _x_3 + _x_4
+  - - absorption _x_3 _x_4
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = x * x
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = 238732414637843/250000000000000
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = x * _x_5
+  - - None
+- - File "none", line 1, characters 1-0
+  - x = Rand (-2, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = _x_1 * _x_2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = -6450306886639899/50000000000000000
+  - - None
+sanity_check: true
+time: 0.031549563

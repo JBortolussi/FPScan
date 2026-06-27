@@ -1,0 +1,13 @@
+(FPCore
+ (x)
+ :name
+ "verhulst"
+ :cite
+ (darulova-kuncak-2014 solovyev-et-al-2015)
+ :fpbench-domain
+ science
+ :precision
+ binary64
+ :pre
+ (<= 1/10 x 3/10)
+ (let ((r 4) (K 111/100)) (/ (* r x) (+ 1 (/ x K)))))

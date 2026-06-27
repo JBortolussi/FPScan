@@ -1,0 +1,10 @@
+(FPCore
+ (radius theta)
+ :name
+ "polarToCarthesian__y"
+ :pre
+ (and (<= 1 radius 10) (<= 0 theta 360))
+ :spec
+ (* radius (sin (* theta (/ 180 PI))))
+ (let* ((pi 314159265359/100000000000) (radiant (* theta (/ pi 180))))
+   (* radius (sin radiant))))

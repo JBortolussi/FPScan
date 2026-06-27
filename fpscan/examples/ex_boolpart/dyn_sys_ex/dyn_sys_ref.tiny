@@ -1,0 +1,47 @@
+/*calcul le nombre d'itérations (t3p) pour que la position convere à + ou - 3% de la référence yd + booleen fixant le temps maximal de convergence.*/
+
+real xc1, xc2, xp1, xp2;
+real yd;
+real oxc1, oxc2, oxp1, oxp2;
+real t, t3p;
+bool end;
+bool b1;
+
+xc1 = 0.;
+xc2 = 0.;
+xp1 = 0.;
+xp2 = 0.;
+oxc1 = xc1;
+oxc2 = xc2;
+oxp1 = xp1;
+oxp2 = xp2;
+
+yd = 0.5;
+
+t = 0.;
+t3p = 0.;
+end = false;
+
+b1 = t3p < 37.;
+
+while (true) {
+      if ((xp1 >= yd - yd * 0.03) && (xp1 <= yd + yd * 0.03)) {
+         if (!end) {
+            end = true;
+            t3p = t;
+         }
+      }
+      else {
+         end = false;
+      }
+      oxc1 = xc1;
+      oxc2 = xc2;
+      oxp1 = xp1;
+      oxp2 = xp2;
+      xc1 = 0.499 * oxc1 - 0.05 * oxc2 + (oxp1 - yd);
+      xc2 = 0.01 * oxc1 + oxc2;
+      xp1 = 0.028224 * oxc1 + oxp1 + 0.01 * oxp2 - 0.064 * (oxp1 - yd);
+      xp2 = 5.6448 * oxc1 - 0.01 * oxp1 + oxp2 - 12.8 * (oxp1 -yd);
+      t++;
+      b1 = t3p < 37.;
+}

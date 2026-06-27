@@ -1,0 +1,80 @@
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_13
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = sin (lat2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = sin (lat1)
+  - - None
+- - File "none", line 1, characters 1-0
+  - lat1 = Rand (0, 2/5)
+  - - None
+- - File "none", line 1, characters 1-0
+  - lon2 = Rand (-62831853/20000000, -1/2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = cos (lat1)
+  - - None
+- - File "none", line 1, characters 1-0
+  - s_dLon = _x_5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_10 = _x_9 * c_dLon
+  - - None
+- - File "none", line 1, characters 1-0
+  - c_dLon = _x_6
+  - - None
+- - File "none", line 1, characters 1-0
+  - s_lat1 = _x_1
+  - - None
+- - File "none", line 1, characters 1-0
+  - lat2 = Rand (1/2, 1)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_13 = atan (_x_12)
+  - - None
+- - File "none", line 1, characters 1-0
+  - dLon = lon2 - lon1
+  - - absorption lon1 lon2
+    - None
+- - File "none", line 1, characters 1-0
+  - c_lat2 = _x_4
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_9 = s_lat1 * c_lat2
+  - - None
+- - File "none", line 1, characters 1-0
+  - c_lat1 = _x_2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_7 = c_lat2 * s_dLon
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_11 = _x_8 - _x_10
+  - - None
+    - absorption _x_10 _x_8
+- - File "none", line 1, characters 1-0
+  - _x_12 = _x_7 / _x_11
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = cos (lat2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - s_lat2 = _x_3
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = cos (dLon)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = sin (dLon)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = c_lat1 * s_lat2
+  - - None
+- - File "none", line 1, characters 1-0
+  - lon1 = Rand (0, 62831853/20000000)
+  - - None
+sanity_check: true
+time: 0.038944272

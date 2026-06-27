@@ -1,0 +1,15 @@
+(FPCore
+ (x)
+ :name
+ "sine"
+ :cite
+ (darulova-kuncak-2014 solovyev-et-al-2015)
+ :fpbench-domain
+ mathematics
+ :precision
+ binary64
+ :pre
+ (< -157079632679/100000000000 x 157079632679/100000000000)
+ (-
+  (+ (- x (/ (* (* x x) x) 6)) (/ (* (* (* (* x x) x) x) x) 120))
+  (/ (* (* (* (* (* (* x x) x) x) x) x) x) 5040)))

@@ -1,0 +1,58 @@
+report:
+- - File "none", line 1, characters 1-0
+  - k = 13806503/1000000000000000000000000000000
+  - - None
+- - File "none", line 1, characters 1-0
+  - b = 427/10000000
+  - - None
+- - File "none", line 1, characters 1-0
+  - v = Rand (1/10, 1/2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_7 = v - _x_6
+  - - None
+- - File "none", line 1, characters 1-0
+  - n = 1000
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = p + _x_4
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_8 - _x_10
+  - - None
+    - absorption _x_10 _x_8
+- - File "none", line 1, characters 1-0
+  - t = 300
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = n / v
+  - - None
+- - File "none", line 1, characters 1-0
+  - a = 401/1000
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = _x_2 * _x_3
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = n * b
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_9 = k * n
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = n / v
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = a * _x_1
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = _x_5 * _x_7
+  - - None
+- - File "none", line 1, characters 1-0
+  - p = 35000000
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_10 = _x_9 * t
+  - - None
+sanity_check: true
+time: 0.037593336000000005

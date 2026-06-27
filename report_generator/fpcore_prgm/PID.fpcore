@@ -1,0 +1,28 @@
+(FPCore
+ (m kp ki kd c)
+ :name
+ "PID"
+ :description
+ "Keep a measure at its setpoint using a PID controller.\nInputs: Measure `m`; gains `kp`, `ki`, `kd`; setpoint `c`"
+ :cite
+ (damouche-martel-chapoutot-nsv14 damouche-martel-chapoutot-fmics15)
+ :fpbench-domain
+ controls
+ :precision
+ binary64
+ :pre
+ (and (< -10 m 10) (< -10 c 10))
+ :example
+ ((m -5) (kp 47257/5000) (ki 34503/50000) (kd 14227/5000))
+ (let* ((dt 1/2) (invdt (/ 1 dt)))
+   (while*
+    (< t 100)
+    ((e 0 (- c m))
+     (p 0 (* kp e))
+     (i 0 (+ i (* (* ki dt) e)))
+     (d 0 (* (* kd invdt) (- e eold)))
+     (r 0 (+ (+ p i) d))
+     (m m (+ m (* 1/100 r)))
+     (eold 0 e)
+     (t 0 (+ t dt)))
+    m)))

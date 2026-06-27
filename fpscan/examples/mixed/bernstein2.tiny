@@ -1,0 +1,16 @@
+real x, y ;
+int cpt;
+
+cpt = 0;
+x = 0.;
+y = rand_real(0., 0.5);
+
+while (cpt <= 1000) { 
+
+y = y + 0.001 * (18.*x*x - 18.*x + 3.);
+
+x = x + 0.001;
+cpt++;
+
+
+}

@@ -1,0 +1,21 @@
+real __result__;
+
+real a;
+real b;
+real c;
+
+real cond;
+real tmp;
+
+a = rand_real(0.001, 0.5);
+b = rand_real(20000000., 20000000.);
+
+tmp = 1.;
+cond = a - tmp;
+
+if (cond > 0. ) {
+    c = a;
+} else {
+    c = b;
+}
+__result__ = c + b;

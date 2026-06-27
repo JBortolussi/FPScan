@@ -1,0 +1,8 @@
+int x;
+bool b;
+x = 0;
+b = true;
+while (b) {
+      x = x+1;
+      b = x<10;
+}

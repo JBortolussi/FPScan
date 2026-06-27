@@ -1,0 +1,26 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = radius * _x_3
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_3 = sin (radiant)
+  - []
+- - File "none", line 1, characters 1-0
+  - radiant = theta * _x_2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = pi / _x_1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_1 = 180
+  - []
+- - File "none", line 1, characters 1-0
+  - pi = 314159265359/100000000000
+  - []
+- - File "none", line 1, characters 1-0
+  - radius = Rand (1, 10)
+  - []
+- - File "none", line 1, characters 1-0
+  - theta = Rand (0, 360)
+  - []

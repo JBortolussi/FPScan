@@ -1,0 +1,12 @@
+report:
+- - ''
+  - p0 = _x_1 - x2
+  - - cancellation
+- - ''
+  - p2 = _x_3 - x1
+  - - cancellation
+- - ''
+  - p1 = _x_2 - x0
+  - - cancellation
+sanity_check: false
+time: 0.9523659350000001

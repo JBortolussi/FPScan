@@ -1,0 +1,57 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_10
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_10 = sqrt (_x_9)
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_9 = _x_7 * _x_8
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_8 = s - c
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_7 = _x_5 * _x_6
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_6 = s - b
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = s * _x_4
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_4 = s - a
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - s = _x_2 / _x_3
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_3 = 2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = _x_1 + c
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = a + b
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - a = Rand (9, 9)
+  - []
+- - File "none", line 1, characters 1-0
+  - b = Rand (471/100, 489/100)
+  - []
+- - File "none", line 1, characters 1-0
+  - c = Rand (471/100, 489/100)
+  - []

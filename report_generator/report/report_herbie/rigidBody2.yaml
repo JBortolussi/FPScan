@@ -1,0 +1,28 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_3 + _x_5
+  - - absorption _x_3 _x_5
+    - absorption _x_5 _x_3
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_5 = - x2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_3 = _x_2 * x3
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = x3 * _x_1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_1 = 6
+  - []
+- - File "none", line 1, characters 1-0
+  - x1 = Rand (-15, 15)
+  - []
+- - File "none", line 1, characters 1-0
+  - x2 = Rand (-15, 15)
+  - []
+- - File "none", line 1, characters 1-0
+  - x3 = Rand (-15, 15)
+  - []

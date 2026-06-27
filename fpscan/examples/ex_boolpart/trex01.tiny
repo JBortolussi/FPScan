@@ -1,0 +1,34 @@
+bool b, verifier;
+int x, y, k, z;
+b = rand_bool();
+verifier = true;
+if (b) {
+   z = 1;
+   while (z<k) { z = 2 * z; }
+   if (!(z>=2)) { verifier = false; }
+   while (x>0 && y>0) {
+         b = rand_bool();
+         if (b) {
+            x = x - 1;
+            z = z - 1;
+         }
+         else {
+            y = y - 1;
+         }
+   }
+}
+else {
+   z = 1;
+   while (z<k) { z = 2 * z; }
+   if (!(z>=2)) { verifier = false; }
+   while (x>0 && y>0) {
+         b = rand_bool();
+         if (b) {
+            x = x - 2;
+            z = z - 1;
+         }
+         else {
+            y = y - 2;
+         }
+   }
+}

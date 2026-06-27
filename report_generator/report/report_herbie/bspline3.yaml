@@ -1,0 +1,20 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_2 / _x_5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_5 = - _x_4
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_4 = 6
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = _x_1 * u
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_1 = u * u
+  - []
+- - File "none", line 1, characters 1-0
+  - u = Rand (0, 1)
+  - []

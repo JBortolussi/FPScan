@@ -1,0 +1,12 @@
+(FPCore
+    (x y)
+    :name
+    "complex_sqrt_i_pos"
+    :cite
+    (Sanchez-Stern-2018)
+    :pre
+    (and (<= 0.01 x 0.25) (<= 0.01 y 3))
+    (
+        - (sqrt (+ (* x x) (*y y))) x
+    )
+)

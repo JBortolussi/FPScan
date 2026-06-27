@@ -1,0 +1,31 @@
+(FPCore
+ (u)
+ :name
+ "Trapeze"
+ :cite
+ (damouche-martel-chapoutot-fmics15)
+ :fpbench-domain
+ mathematics
+ :pre
+ (<= 111/100 u 111/50)
+ (let* ((a 1/4) (b 5000) (n 25) (h (/ (- b a) n)))
+   (while*
+    (< xa 5000)
+    ((xb 0 (let ((v (+ xa h))) (if (> v 5000) 5000 v)))
+     (r
+      0
+      (let ((gxa
+             (/
+              u
+              (-
+               (+ (- (* (* (* 7/10 xa) xa) xa) (* (* 3/5 xa) xa)) (* 9/10 xa))
+               1/5)))
+            (gxb
+             (/
+              u
+              (-
+               (+ (- (* (* (* 7/10 xb) xb) xb) (* (* 3/5 xb) xb)) (* 9/10 xb))
+               1/5))))
+        (+ r (* (* (+ gxa gxb) 1/2) h))))
+     (xa 1/4 (+ xa h)))
+    r)))

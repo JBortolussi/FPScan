@@ -1,0 +1,58 @@
+/*Newton method on y=cx+d*/
+real c;
+real d;
+real final_x;
+real final_y;
+real eps;
+real a;
+real b;
+bool b1;
+real K;
+real eqa;
+real eqb;
+real moy;
+
+
+c = 3.;
+d = 5.;
+final_y = 0.;
+eps = 0.001;
+
+final_x = (final_y-d) / c;
+
+a = final_x - 10.;
+b = final_x + 10.;
+K = c * final_x + d;
+eqa = c * a + d;
+eqb = c * b + d;
+moy = (eqa + eqb) / 2.;
+if (eqb > K){
+   b1 = (eqb - K)>eps && (K - eqa)>eps;
+   while (b1) {
+         if (moy >= K) {
+            b = moy;
+         }
+         else {
+            a = moy;
+         }
+         eqa = c * a + d;
+         eqb = c * b + d;
+         moy = (eqa + eqb) / 2.;
+         b1 = (eqb - K)>eps && (K - eqa)>eps;
+   }
+}
+else {
+   b1 = (eqa - K)>eps && (K - eqb)>eps;
+   while (b1) {
+         if (moy <= K) {
+            b = moy;
+         }
+         else {
+            a = moy;
+         }
+         eqa = c * a + d;
+         eqb = c * b + d;
+         moy = (eqa + eqb) / 2.;
+         b1 = (eqa - K)>eps && (K - eqb)>eps;
+   }
+}

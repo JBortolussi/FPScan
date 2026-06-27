@@ -1,0 +1,33 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_2 / _x_5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_5 = _x_3 - _x_4
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = 1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_3 = t * t
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = t - _x_1
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = 1
+  - []
+- - File "none", line 1, characters 1-0
+  - t = x * y
+  - []
+- - File "none", line 1, characters 1-0
+  - x = Rand (1001/1000, 2)
+  - []
+- - File "none", line 1, characters 1-0
+  - y = Rand (1001/1000, 2)
+  - []

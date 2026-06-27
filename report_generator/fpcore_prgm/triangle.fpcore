@@ -1,0 +1,9 @@
+(FPCore
+ (a b c)
+ :name
+ "triangle"
+ :cite
+ (darulova-kuncak-2014)
+ :pre
+ (and (<= 9 a 9) (<= 471/100 b 489/100) (<= 471/100 c 489/100))
+ (let ((s (/ (+ (+ a b) c) 2))) (sqrt (* (* (* s (- s a)) (- s b)) (- s c)))))

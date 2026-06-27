@@ -1,0 +1,1 @@
+(FPCore (x0 x1 x2) :herbie-status ex-start :herbie-time 2993.9375 :herbie-error-input ((256 0.3698425781475362) (8000 0.35396560313744013)) :herbie-error-output ((256 0.12109375) (8000 0.142875)) :name "sum" :precision binary64 :pre (and (and (and (<= 1.0 x0) (<= x0 2.0)) (and (<= 1.0 x1) (<= x1 2.0))) (and (<= 1.0 x2) (<= x2 2.0))) (+ x1 (+ x2 x0)))

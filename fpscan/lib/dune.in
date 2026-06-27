@@ -1,0 +1,22 @@
+(ocamllex lexer)
+
+(ocamllex lexer_fpcore)
+
+(menhir
+ (modules parser))
+
+(menhir (modules parser_fpcore))
+
+(include_subdirs unqualified)
+
+(library
+ (public_name tiny)
+ (name tiny)
+ (foreign_stubs
+  (language c)
+  (names floats_stub))
+ (libraries str zarith yojson @BDDAPRON@ apron apron.octMPQ apron.polkaMPQ apron.boxMPQ csv unix yaml.unix lwt.unix z3 domainslib) ;; mute
+ (modules
+   (:standard \ poly_mute @EXCLUDEMODULES@))
+  (flags
+   (:standard -warn-error -A)))

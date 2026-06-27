@@ -1,0 +1,18 @@
+/* les commentaires
+ * sont au format C. */
+int  y,x;
+bool b1;
+bool b2;
+y = rand_int(3,5);
+x = rand_int(2,10);
+b1 = x < 10;
+b2 = y < 4;
+x = 3;
+if (b1) {
+x = 5;
+}
+else {
+x = 25;
+}
+
+

@@ -1,0 +1,14 @@
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = x1 + x2
+  - - absorption x2 x1
+    - cancellation
+    - absorption x1 x2
+- - File "none", line 1, characters 1-0
+  - x2 = Rand (0, 3)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x1 = Rand (0, 2)
+  - - None
+sanity_check: true
+time: 0.18636295

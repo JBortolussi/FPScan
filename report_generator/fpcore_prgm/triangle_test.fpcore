@@ -1,0 +1,9 @@
+(FPCore
+ (a b c)
+ :name
+ "triangle"
+ :cite
+ (darulova-kuncak-2014)
+ :pre
+ (and (<= 1 a 1) (<= 1 b 1) (<= 1 c 1))
+ (let ((s (/ (+ (+ a b) c) 2))) (cos (* (* (* s (- s a)) (- s b)) (- s c)))))

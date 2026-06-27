@@ -1,0 +1,12 @@
+int x, y, z;
+bool tmp;
+while (x<100 && z>100) {
+      tmp = rand_bool();
+      if (tmp) {
+         x++;
+      }
+      else {
+         x--;
+         z--;
+      }
+}

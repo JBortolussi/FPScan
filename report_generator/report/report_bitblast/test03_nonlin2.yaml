@@ -1,0 +1,21 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_1 / _x_2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = x - y
+  - - absorption x y
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = x + y
+  - - absorption x y
+    - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - x = Rand (0, 1)
+  - []
+- - File "none", line 1, characters 1-0
+  - y = Rand (-1, -1/10)
+  - []

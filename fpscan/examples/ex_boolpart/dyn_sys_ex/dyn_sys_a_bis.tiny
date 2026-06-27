@@ -1,0 +1,57 @@
+/* calcul de l'aire entre la courbe et la référence à partir du premier dépassement de la référence + booleen partitionnant sur les valeurs qui font que l'aire dépassent une certaine valeur + petit intervalle sur l'amortissement. */
+
+real xc1, xc2, xp1, xp2;
+real yd;
+real oxc1, oxc2, oxp1, oxp2;
+int t;
+bool b1;
+real am;
+real A;
+bool ref;
+bool above;
+
+A = 0.;
+ref = false;
+
+
+xc1 = 0.;
+xc2 = 0.;
+xp1 = 0.;
+xp2 = 0.;
+oxc1 = xc1;
+oxc2 = xc2;
+oxp1 = xp1;
+oxp2 = xp2;
+
+yd = 0.5;
+
+am = rand_real(0., 0.2);
+
+t = 0;
+
+b1 = A <= 10.;
+
+while (t<2000) {
+     above = xp1 >= yd;
+      if (above) {
+         ref = true;
+      }
+      if (ref) {
+         if (above) {
+            A = A + xp1 - yd;
+         }
+         else {
+            A = A + yd -xp1;
+         }
+      }
+      oxc1 = xc1;
+      oxc2 = xc2;
+      oxp1 = xp1;
+      oxp2 = xp2;
+      xc1 = 0.499 * oxc1 - 0.05 * oxc2 + (oxp1 - yd);
+      xc2 = am * oxc1 + oxc2;
+      xp1 = 0.028224 * oxc1 + oxp1 + 0.01 * oxp2 - 0.064 * (oxp1 - yd);
+      xp2 = 5.6448 * oxc1 - 0.01 * oxp1 + oxp2 - 12.8 * (oxp1 -yd);
+      t++;
+      b1 = A <=10.;
+}

@@ -1,0 +1,65 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_8 + _x_17
+  - - absorption _x_8 _x_17
+    - absorption _x_17 _x_8
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_17 = _x_16 + x
+  - - absorption _x_16 x
+    - absorption x _x_16
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_16 = _x_13 * _x_15
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_15 = x * _x_14
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_14 = x * x
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_13 = _x_11 + _x_12
+  - - absorption _x_11 _x_12
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_12 = -8333333333333333/50000000000000000
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_11 = x * _x_10
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_10 = x * _x_9
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_9 = 8333333333333333/1000000000000000000
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_8 = _x_6 * _x_7
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_7 = -248015873015873/1250000000000000000
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_6 = _x_2 * _x_5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_5 = x * _x_4
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_4 = x * _x_3
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_3 = x * x
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = x * _x_1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_1 = x * x
+  - []
+- - File "none", line 1, characters 1-0
+  - x = Rand (-157079632679/100000000000, 157079632679/100000000000)
+  - []

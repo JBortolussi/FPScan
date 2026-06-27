@@ -1,0 +1,1 @@
+(FPCore (x) :herbie-status ex-start :herbie-time 1813.724365234375 :herbie-error-input ((256 0) (8000 0.000125)) :herbie-error-output ((256 0) (8000 0.17023924418852387)) :name "cav10" :precision binary64 :pre (and (< 0.0 x) (< x 10.0)) (if (>= (- x) 0.0) (- (* x -0.1)) (+ (* x x) 2.0)))

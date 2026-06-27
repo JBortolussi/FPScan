@@ -1,0 +1,10 @@
+int x;
+bool b0, b1, b2, random;
+b2 = true;
+b1 = false;
+b0 = rand_bool();
+random = rand_bool();
+if random {x = 0;} else {x = 1;}
+if b2 {x = 2*x + 1;} else {x = 2*x;}
+if b1 {x = 2*x + 1;} else {x = 2*x;}
+if b0 {x = 2*x + 1;} else {x = 2*x;}

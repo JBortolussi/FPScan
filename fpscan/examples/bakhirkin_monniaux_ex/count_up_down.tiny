@@ -1,0 +1,11 @@
+int n, x, y;
+bool verifier;
+n = 100;
+x = n;
+y = 0;
+verifier = true;
+while (x>0) {
+      x--;
+      y++;
+}
+if (!(y==n)) {verifier = false;}

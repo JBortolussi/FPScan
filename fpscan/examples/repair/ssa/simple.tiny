@@ -1,0 +1,8 @@
+real __result__;
+real x;
+real y;
+
+x = rand_real(1.0, 2.0);
+y = rand_real(33554432.0, 67108864.0);
+
+__result__ = x + y;

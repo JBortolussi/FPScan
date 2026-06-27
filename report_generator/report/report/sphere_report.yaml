@@ -1,0 +1,38 @@
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = x + _x_4
+  - - cancellation
+    - absorption _x_4 x
+    - absorption x _x_4
+- - File "none", line 1, characters 1-0
+  - r = Rand (0, 10)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = cos (lon)
+  - - None
+- - File "none", line 1, characters 1-0
+  - lon = Rand (-62831853/20000000, 62831853/20000000)
+  - - None
+- - File "none", line 1, characters 1-0
+  - cosLon = _x_2
+  - - None
+- - File "none", line 1, characters 1-0
+  - lat = Rand (-392699/250000, 392699/250000)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x = Rand (-10, 10)
+  - - None
+- - File "none", line 1, characters 1-0
+  - sinLat = _x_1
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = r * sinLat
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = sin (lat)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = _x_3 * cosLon
+  - - None
+sanity_check: true
+time: 0.023824929

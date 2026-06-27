@@ -1,0 +1,48 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_1 = x0 + x1
+  - - None
+- - File "none", line 1, characters 1-0
+  - x3 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x6 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_6 + x7
+  - - None
+- - File "none", line 1, characters 1-0
+  - x5 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x4 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x0 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x2 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = _x_5 + x6
+  - - None
+- - File "none", line 1, characters 1-0
+  - x7 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = _x_4 + x5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = _x_1 + x2
+  - - None
+- - File "none", line 1, characters 1-0
+  - x1 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = _x_3 + x4
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = _x_2 + x3
+  - - None
+sanity_check: true
+time: 0.056851086

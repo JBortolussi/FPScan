@@ -1,0 +1,1 @@
+(FPCore (x) :herbie-status ex-start :herbie-time 4091.506591796875 :herbie-error-input ((256 0) (8000 0.0075)) :herbie-error-output ((256 0) (8000 0.00025)) :name "sqroot" :precision binary64 :pre (and (<= 0.0 x) (<= x 1.0)) (fma (fma x (fma x (fma x -0.0390625 0.0625) -0.125) 0.5) x 1.0))

@@ -1,0 +1,45 @@
+(FPCore
+ (n)
+ :name
+ "arclength_of_a_wiggly_function__old_version_"
+ :cite
+ (precimonious-2013)
+ :precision
+ binary64
+ :pre
+ (>= n 0)
+ :fpbench-pre-override
+ (<= 50 x 60)
+ (let ((dppi (acos -1)))
+   (let ((h (/ dppi n)))
+     (while
+      (<= i n)
+      ((s1
+        0
+        (let ((t2
+               (let ((x (* i h)))
+                 (while
+                  (<= k 5)
+                  ((d0
+                    (! :precision binary32 2)
+                    (! :precision binary32 (* 2 d0)))
+                   (t0 x (+ t0 (/ (sin (* d0 x)) d0)))
+                   (k 1 (+ k 1)))
+                  t0))))
+          (let ((s0 (sqrt (+ (* h h) (* (- t2 t1) (- t2 t1))))))
+            (! :precision binary80 (+ s1 s0)))))
+       (t1
+        0
+        (let ((t2
+               (let ((x (* i h)))
+                 (while
+                  (<= k 5)
+                  ((d0
+                    (! :precision binary32 2)
+                    (! :precision binary32 (* 2 d0)))
+                   (t0 x (+ t0 (/ (sin (* d0 x)) d0)))
+                   (k 1 (+ k 1)))
+                  t0))))
+          t2))
+       (i 1 (+ i 1)))
+      s1))))

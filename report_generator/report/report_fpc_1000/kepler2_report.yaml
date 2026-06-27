@@ -1,0 +1,12 @@
+report:
+- - ''
+  - _x_6 = _x_5 - x4
+  - - cancellation
+- - ''
+  - _x_4 = _x_3 + x2
+  - - cancellation
+- - ''
+  - _x_11 = x1 - x2
+  - - cancellation
+sanity_check: false
+time: 5.4711324480000005

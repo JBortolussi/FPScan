@@ -1,0 +1,15 @@
+(FPCore
+ (a b)
+ :name
+ "Rump_s_example__with_pow"
+ :example
+ ((a 77617) (b 33096))
+ (+
+  (+
+   (+
+    (* 1335/4 (pow b 6))
+    (*
+     (pow a 2)
+     (- (- (- (* (* 11 (pow a 2)) (pow b 2)) (pow b 6)) (* 121 (pow b 4))) 2)))
+   (* 11/2 (pow b 8)))
+  (/ a (* 2 b))))

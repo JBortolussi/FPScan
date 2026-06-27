@@ -1,0 +1,47 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_6 / _x_9
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_9 = _x_7 * _x_8
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_8 = t1 + u
+  - - None
+    - absorption u t1
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_7 = t1 + u
+  - - None
+    - absorption u t1
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = _x_5 * v
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_5 = - t1
+  - []
+- - File "none", line 1, characters 1-0
+  - t1 = _x_1 + _x_3
+  - - None
+    - absorption _x_3 _x_1
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = _x_2 * T
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = 3/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_1 = 1657/5
+  - []
+- - File "none", line 1, characters 1-0
+  - T = Rand (-30, 50)
+  - []
+- - File "none", line 1, characters 1-0
+  - u = Rand (-100, 100)
+  - []
+- - File "none", line 1, characters 1-0
+  - v = Rand (20, 20000)
+  - []

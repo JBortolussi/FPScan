@@ -1,0 +1,9 @@
+(FPCore
+ (u)
+ :name
+ "bspline3"
+ :cite
+ (darulova-kuncak-2014)
+ :pre
+ (<= 0 u 1)
+ (/ (- (* (* u u) u)) 6))

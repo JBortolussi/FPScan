@@ -1,0 +1,12 @@
+real x;
+real y;
+real z;
+real u;
+real v;
+
+x = rand_real(1., 10.);
+y = rand_real(1., 10.);
+u = rand_real(11., 11.);
+
+z = x / y;
+v = u + z;

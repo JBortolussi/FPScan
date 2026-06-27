@@ -1,0 +1,15 @@
+report:
+- - ''
+  - _x_5 = x1 + _x_4
+  - - cancellation
+- - ''
+  - b = _x_5 - _x_6
+  - - cancellation
+- - ''
+  - a = _x_2 - _x_3
+  - - cancellation
+- - ''
+  - _x_2 = _x_1 + x2
+  - - cancellation
+sanity_check: false
+time: 0.130738078

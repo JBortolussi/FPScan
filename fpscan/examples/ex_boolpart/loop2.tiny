@@ -1,0 +1,8 @@
+int x;
+bool cond;
+x = rand_int(0,8);
+cond = x < 10;
+while (x<20) {
+ cond = x < 10;
+ x++;
+}

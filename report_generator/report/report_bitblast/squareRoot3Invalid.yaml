@@ -1,0 +1,44 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_if_1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_if_1 = _x_8
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_8 = sqrt (_x_7)
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_7 = _x_6 + x
+  - - None
+    - absorption x _x_6
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = 1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_if_1 = _x_3 + _x_5
+  - - None
+    - absorption _x_5 _x_3
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = _x_4 * x
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_4 = 1/2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_3 = 1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = _x_1 - x
+  - - None
+    - absorption x _x_1
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_1 = 1/10000
+  - []
+- - File "none", line 1, characters 1-0
+  - x = Rand (0, 10)
+  - []

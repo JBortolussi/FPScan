@@ -1,0 +1,42 @@
+report:
+- - File "none", line 1, characters 1-0
+  - p0 = _x_1 - x2
+  - - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - p1 = _x_2 - x0
+  - - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - p2 = _x_3 - x1
+  - - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_2 = x1 + x2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = x2 + x0
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = x0 + x1
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = p0 + p1
+  - - absorption p1 p0
+    - None
+    - absorption p0 p1
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_4 + p2
+  - - absorption p2 _x_4
+    - None
+- - File "none", line 1, characters 1-0
+  - x0 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x2 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x1 = Rand (1, 2)
+  - - None
+sanity_check: true
+time: 12.445983123000001

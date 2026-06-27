@@ -1,0 +1,27 @@
+bool b;
+int x;
+x= 1;
+b = false;
+if (b) {
+  x = 2;
+} else { 
+  x = 3;
+}
+if (! b) {
+  x = 4; 
+} 
+else {
+ x = 5;
+} 
+if (b && true) {
+  x = 6;
+} else {
+  x = 7;
+} 
+if (b || false) {
+  x = 8;
+} else {
+  x = 9; 
+}
+
+ 

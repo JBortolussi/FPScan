@@ -1,0 +1,29 @@
+(FPCore
+ (h y_n* c)
+ :name
+ "Runge_Kutta_4"
+ :description
+ "Solve the differential equation `y' = (c - y)^2\nInputs: Step size `h`; initial condition `y_n*`; paramter `c`"
+ :cite
+ (damouche-martel-chapoutot-fmics15)
+ :fpbench-domain
+ mathematics
+ :precision
+ binary32
+ :pre
+ (and (< 0 y_n* 100) (< 1/100000 h 1/10) (< 50 c 200))
+ :example
+ ((h 1/10) (y_n* 101/10) (c 1001/10))
+ (let ((sixieme (/ 1 6)) (eps 1/200) (k 6/5))
+   (while
+    (> e eps)
+    ((y_n
+      y_n*
+      (let* ((k1 (let ((v (- c y_n))) (* (* k v) v)))
+             (k2 (let ((v (- c (+ y_n (* (* 1/2 h) k1))))) (* (* k v) v)))
+             (k3 (let ((v (- c (+ y_n (* (* 1/2 h) k2))))) (* (* k v) v)))
+             (k4 (let ((v (- c (+ y_n (* h k3))))) (* (* k v) v))))
+        (+ y_n (* (* sixieme h) (+ (+ (+ k1 (* 2 k2)) (* 2 k3)) k4)))))
+     (i 0 (+ i 1))
+     (e 1 (- e eps)))
+    (fabs e))))

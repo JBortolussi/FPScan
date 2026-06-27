@@ -1,0 +1,25 @@
+real xc1, xc2, xp1, xp2;
+real yd;
+real oxc1, oxc2, oxp1, oxp2;
+
+xc1 = 0.;
+xc2 = 0.;
+xp1 = 0.;
+xp2 = 0.;
+oxc1 = xc1;
+oxc2 = xc2;
+oxp1 = xp1;
+oxp2 = xp2;
+
+yd = rand_real(0.49, 0.51);
+
+while (true) {
+      oxc1 = xc1;
+      oxc2 = xc2;
+      oxp1 = xp1;
+      oxp2 = xp2;
+      xc1 = 0.499 * oxc1 - 0.05 * oxc2 + (oxp1 - yd);
+      xc2 = 0.01 * oxc1 + oxc2;
+      xp1 = 0.028224 * oxc1 + oxp1 + 0.01 * oxp2 - 0.064 * (oxp1 - yd);
+      xp2 = 5.6448 * oxc1 - 0.01 * oxp1 + oxp2 - 12.8 * (oxp1 -yd);
+}

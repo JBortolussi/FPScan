@@ -1,0 +1,24 @@
+(FPCore
+ (a b c)
+ :name
+ "triangleSorted"
+ :cite
+ (darulova-kuncak-2014)
+ :pre
+ (and (<= 1 a 9)
+      (<= 1 b 9)
+      (<= 1 c 9)
+      (> (+ a b) (+ c 1/1000000))
+      (> (+ a c) (+ b 1/1000000))
+      (> (+ b c) (+ a 1/1000000))
+      (< a c)
+      (< b c))
+ :example           
+ ((b 4) (c 17/2))
+ (if (< a b)
+   (/
+    (sqrt (* (* (* (+ c (+ b a)) (- a (- c b))) (+ a (- c b))) (+ c (- b a))))
+    4)
+   (/
+    (sqrt (* (* (* (+ c (+ a b)) (- b (- c a))) (+ b (- c a))) (+ c (- a b))))
+    4)))

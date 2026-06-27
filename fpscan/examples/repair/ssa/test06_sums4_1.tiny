@@ -1,0 +1,17 @@
+
+real __result__;
+real _x0;
+real _x1;
+real x0;
+real x1;
+real x2;
+real x3;
+
+x0 = rand_real(-0.00001, 1.00001);
+x1 = rand_real(0.0, 1.0);
+x2 = rand_real(0.0, 1.0);
+x3 = rand_real(0.0, 1.0);
+
+_x1 = (x0 + x1);
+_x0 = (_x1 + x2);
+__result__ = (_x0 + x3);

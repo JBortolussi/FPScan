@@ -1,0 +1,16 @@
+int x;
+int y;
+bool b1; /* we added this condition to introduce a bool */ 
+bool b2;
+x = 0;
+y = 0;
+b1 = y >= 0;
+b2 = x <= 50;
+while (b1) {
+  if (b2) {y++;}
+  else {y--;}
+  x++;
+  b1 = y >= 0;
+  b2 = x <= 50;
+}
+

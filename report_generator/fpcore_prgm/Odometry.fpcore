@@ -1,0 +1,43 @@
+(FPCore
+ (sr* sl*)
+ :name
+ "Odometry"
+ :description
+ "Compute the position of a robot from the speed of the wheels.\nInputs: Speed `sl`, `sr` of the left and right wheel, in rad/s."
+ :cite
+ (damouche-martel-chapoutot-fmics15)
+ :fpbench-domain
+ controls
+ :precision
+ binary32
+ :pre
+ (and (< 1/20 sl* (* 2 PI)) (< 1/20 sr* (* 2 PI)))
+ :example
+ ((sr* 785398163397/10000000000000) (sl* 525398163397/10000000000000))
+ (let ((inv_l 1/10) (c 617/50))
+   (while*
+    (< t 1000)
+    ((delta_dl 0 (* c sl))
+     (delta_dr 0 (* c sr))
+     (delta_d 0 (* (+ delta_dl delta_dr) 1/2))
+     (delta_theta 0 (* (- delta_dr delta_dl) inv_l))
+     (arg 0 (+ theta (* delta_theta 1/2)))
+     (cosi
+      0
+      (+
+       (- 1 (* (* arg arg) 1/2))
+       (* (* (* (* arg arg) arg) arg) 208333333/5000000000)))
+     (x 0 (+ x (* delta_d cosi)))
+     (sini
+      0
+      (+
+       (- arg (* (* (* arg arg) arg) 833333333/5000000000))
+       (* (* (* (* (* arg arg) arg) arg) arg) 8333333/1000000000)))
+     (y 0 (+ y (* delta_d sini)))
+     (theta -197/200 (+ theta delta_theta))
+     (t 0 (+ t 1))
+     (tmp sl* sl)
+     (sl sl* (if (== j 50) sr sl))
+     (sr sr* (if (== j 50) tmp sr))
+     (j 0 (if (== j 50) 0 (+ j 1))))
+    x)))

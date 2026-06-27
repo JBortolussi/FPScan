@@ -1,0 +1,1 @@
+(FPCore (x) :herbie-status ex-start :herbie-time 4351.67529296875 :herbie-error-input ((256 0.33203125) (8000 0.33819812031259017)) :herbie-error-output ((256 0.27734375) (8000 0.32159436093777044)) :name "verhulst" :precision binary64 :pre (and (<= 0.1 x) (<= x 0.3)) (/ (fma x 4.0 (* x (* x -3.6036036036036037))) (fma x (* x -0.8116224332440549) 1.0)))

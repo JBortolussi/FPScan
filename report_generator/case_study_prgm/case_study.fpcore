@@ -1,0 +1,11 @@
+(FPCore
+ (x y)
+ :name
+ "simple"
+ :description
+ "Created for case study"
+ :precision
+ binary32
+ :pre
+ (and (<= 1 x 67108864) (<= 1 y 10))
+ (let ((z (+ x y))) (- z x)))

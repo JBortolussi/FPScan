@@ -1,0 +1,16 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_1 = 1
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = z / _x_2
+  - - None
+- - File "none", line 1, characters 1-0
+  - z = Rand (0, 999)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = z + _x_1
+  - - absorption z _x_1
+    - None
+sanity_check: true
+time: 0.09592373300000001

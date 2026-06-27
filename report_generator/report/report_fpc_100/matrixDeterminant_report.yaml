@@ -1,0 +1,12 @@
+report:
+- - ''
+  - _x_13 = _x_10 + _x_12
+  - - cancellation
+- - ''
+  - _x_5 = _x_2 + _x_4
+  - - cancellation
+- - ''
+  - __result__ = _x_8 - _x_16
+  - - cancellation
+sanity_check: false
+time: 0.9307076540000001

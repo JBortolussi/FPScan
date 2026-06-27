@@ -1,0 +1,44 @@
+(FPCore
+ (x0)
+ :name
+ "Newton_Raphson_s_Method"
+ :description
+ "Find the zeros of a function `f = (x - 2)**5`.\nInputs: Initial guess `x0`"
+ :cite
+ (atkinson-1989)
+ :fpbench-domain
+ mathematics
+ :precision
+ binary32
+ :pre
+ (< 0 x0 3)
+ :example
+ ((x0 0))
+ (let ((eps 1/2000))
+   (while*
+    (and (> e eps) (< i 100000))
+    ((x_n
+      0
+      (let ((f
+             (-
+              (+
+               (-
+                (+
+                 (- (* (* x x) (* (* x x) x)) (* (* 10 x) (* (* x x) x)))
+                 (* (* 40 x) (* x x)))
+                (* (* 80 x) x))
+               (* 80 x))
+              32))
+            (ff
+             (+
+              (-
+               (+
+                (- (* (* 5 x) (* (* x x) x)) (* (* 40 x) (* x x)))
+                (* (* 120 x) x))
+               (* 160 x))
+              80)))
+        (- x (/ f ff))))
+     (e 1 (fabs (- x x_n)))
+     (x 0 x_n)
+     (i 0 (+ i 1)))
+    x)))

@@ -1,0 +1,1 @@
+(FPCore (t) :herbie-status ex-start :herbie-time 1627.67724609375 :herbie-error-input ((256 0.01171875) (8000 0.01875)) :herbie-error-output ((256 0.01171875) (8000 0.01875)) :name "intro_example" :precision binary64 :pre (and (<= 0.0 t) (<= t 999.0)) (/ t (+ t 1.0)))

@@ -1,0 +1,1 @@
+(FPCore (x) :herbie-status ex-start :herbie-time 3817.266845703125 :herbie-error-input ((256 0.3515625) (8000 0.3405)) :herbie-error-output ((256 0.28515625) (8000 0.2915)) :name "test05_nonlin1__test2" :precision binary64 :pre (and (< 1.00001 x) (< x 2.0)) (/ (+ x -1.0) (fma x x -1.0)))

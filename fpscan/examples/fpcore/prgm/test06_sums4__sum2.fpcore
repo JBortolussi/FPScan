@@ -1,0 +1,9 @@
+(FPCore
+ (x0 x1 x2 x3)
+ :name
+ "test06_sums4__sum2"
+ :precision
+ binary32
+ :pre
+ (and (< -1/100000 x0 100001/100000) (< 0 x1 1) (< 0 x2 1) (< 0 x3 1))
+ (+ (+ x0 x1) (+ x2 x3)))

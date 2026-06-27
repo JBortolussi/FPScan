@@ -1,0 +1,153 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_41
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_41 = _x_33 + _x_40
+  - - absorption _x_33 _x_40
+    - absorption _x_40 _x_33
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_40 = _x_35 + _x_39
+  - - absorption _x_35 _x_39
+    - absorption _x_39 _x_35
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_39 = _x_37
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_37 = v2 * _x_36
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_36 = 1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_35 = v1 * _x_34
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_34 = 1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_33 = v0 * _x_32
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_32 = 1
+  - []
+- - File "none", line 1, characters 1-0
+  - v0 = _x_23 * _x_30
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_30 = _x_24 * _x_29
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_29 = _x_27 * _x_28
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_28 = a0 / w0
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_27 = _x_25 * _x_26
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_26 = a0 / w0
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_25 = 1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_24 = -3
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_23 = w0 * _x_22
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_22 = - m0
+  - []
+- - File "none", line 1, characters 1-0
+  - v1 = _x_13 * _x_20
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_20 = _x_14 * _x_19
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_19 = _x_17 * _x_18
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_18 = a1 / w1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_17 = _x_15 * _x_16
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_16 = a1 / w1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_15 = 1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_14 = -3
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_13 = w1 * _x_12
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_12 = - m1
+  - []
+- - File "none", line 1, characters 1-0
+  - v2 = _x_3 * _x_10
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_10 = _x_4 * _x_9
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_9 = _x_7 * _x_8
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_8 = a2 / w2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_7 = _x_5 * _x_6
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_6 = a2 / w2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_5 = 1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_4 = -3
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_3 = w2 * _x_2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = - m2
+  - []
+- - File "none", line 1, characters 1-0
+  - a0 = Rand (1/100000, 1)
+  - []
+- - File "none", line 1, characters 1-0
+  - a1 = Rand (1/100000, 1)
+  - []
+- - File "none", line 1, characters 1-0
+  - a2 = Rand (1/100000, 1)
+  - []
+- - File "none", line 1, characters 1-0
+  - m0 = Rand (-1, 1)
+  - []
+- - File "none", line 1, characters 1-0
+  - m1 = Rand (-1, 1)
+  - []
+- - File "none", line 1, characters 1-0
+  - m2 = Rand (-1, 1)
+  - []
+- - File "none", line 1, characters 1-0
+  - w0 = Rand (1/100000, 1)
+  - []
+- - File "none", line 1, characters 1-0
+  - w1 = Rand (1/100000, 1)
+  - []
+- - File "none", line 1, characters 1-0
+  - w2 = Rand (1/100000, 1)
+  - []

@@ -1,0 +1,208 @@
+﻿*added function /project_values/ in relational abstract domains
+Relational, ApronWrapper, BoolPartition : implemented
+BoolActivate : not implemented
+Analyze : used
+val project_values : t -> t -> (Ast.expr * Ast.Var.t) list -> t
+project_values dom1 dom2 [(x+1, y); (z-1,k)] returns dom2 in which y = value of x+1 in dom1 and k = value of z-1 in dom1
+Function project_values works like the function assignment but with a domain (dom1) to evaluate expressions (left elements of the relational list) and a domain (dom2) to assign variables (right elements of the relational list).
+ 
+examples:
+
+ m1 = [| x = [0;8], z = [2;2] |]  m2 = [| u = [0;0] |]
+ Relational.project_values Env(m1) Env(m2) [(x * z, u)] = Env(m3) with m3 = [| u = [0;16] |]
+
+ m1 = [| x = [0;8], z = [2;2], p = top |]  m2 = [| u = top, g = top |] i.e. Env(m2) = top
+ Relational.project_values Env(m1) Env(m2) [(z - 2, u); (x, g)] = Env(m3) with m3 = [| u = [0;0], g = [0;8] |]
+
+ Relational.project_values EnvBot dom1 l = EnvBot
+
+ Relational.project_values dom1 EnvBot l = EnvBot
+
+ Relational.project_values top dom1 l = dom1
+
+ m1 = [| h = [-oo;6] |]  m2 = [| t = [1;1] |]
+ Relational.project_values Env(m1) Env(m2) [(i,o)] = Env(m2) because o is not contained in m2 so there are no values from Env(m1) to project in Env(m2)
+
+ Relational.project_values and ApronWrapper.project_values should work almost in the same way.
+
+
+ m1 = {bv1 = (true : dom1; false : dom2)}  m2 = {bv2 = (true : dom3; false : dom4)}
+ BoolPartition.project_values Env(m1) Env(m2) (bv1,bv2)::l = Env(m3) with m3 = {bv2 = ( true : dom5; false : dom6)}, dom5 = (project_values dom1 dom3 (bv1,bv2)::l) and dom6 = (project_values dom2 dom4 (bv1,bv2)::l)
+
+ m1 = {bv1 = (true : dom1; false : dom2)}  m2 = {bv2 = (true : dom3; false : bottom)}
+ BoolPartition.project_values Env(m1) Env(m2) (bv1,bv2)::l = Env(m3) with m3 = {bv2 = ( true : dom4; false : dom5)}, dom4 = (project_values dom1 dom2 (bv1,bv2)::l) and dom5 = (project_values dom2 top (bv1,bv2)::l)
+
+ m1 = {bv1 = (true : dom1; false : bottom)}  m2 = {bv2 = (true : dom2; false : top)} 
+ BoolPartition.project_values Env(m1) Env (m2) [(true, bv2)] = Env(m3) with m3 = {bv2 = (true : dom3; false: bottom)} and dom3 = (project_values top dom2 [(bv1,bv2)]) = dom2
+
+ m1 = {bv1 = (true : dom1; false : bottom)}  m2 = {bv2 = (true : dom2; false : top)}
+ BoolPartition.project_values Env(m1) Env (m2) [(bv1, bv2)] = Env(m3) with m3 = {bv2 = (true : dom3; false: bottom)} and dom3 = (project_values dom1 dom2 [(bv1,bv2)]) = dom2
+
+ m1 = { bv1 = ( true : dom2; false : dom3)}
+ BoolPartition.project_values NoBool(dom1) Env(m1) l = Env(m2) with m2 = {bv1 = (true : dom4; false : dom5)}, dom4 = (project_values dom1 dom2 l) and dom5 = (project_values dom1 dom3 l)
+
+ m1 = { bv1 = ( true : dom1; false : dom2), bv2 = ( true : dom3; false : dom4)}
+ BoolPartition.project_values Env(m1) NoBool(dom5) l = NoBool(dom6) with dom6 = (project_values dom7 dom5 l) and dom7 = (BoolPartition.gamma Env(m1))
+
+ BoolPartition.project_values NoBool(dom1) NoBool(dom2) l = NoBool(dom3) with dom3 = (project_values dom1 dom2 l)
+
+ m1 = { bv1 = ( true : dom1; false : dom2)}  m2 = { bv2 = (true : dom3; false : dom4), bv3 = (true : dom5; false : dom6)}  l = (bv1, bv3)::tl with bv2 not in tl 
+ BoolPartition.project_values Env(m1) Env(m2) l = Env(m3) with m3 = {bv2 = (true : dom7; false : dom8), bv3 = (true: dom9; false : dom10)}, dom7 = (project_values dom11 dom3 l), dom8 = (project_values dom11 dom4 l), dom9 = (project_values dom1 dom5 l), dom10 = (project_values dom2 dom6 l) and dom11 = (BoolPartition.gamma Env(m1))
+
+ m1 = {bv1 = (true : dom1; false : dom2), bv2 = (true : dom3; false : dom4)}  m2 = {bv3 = (true : dom5; false : dom 6)}  l contains no boolean
+ BoolPartition.project_values Env(m1) Env(m2) l = Env(m3) with m3 = {bv3 = ( true : dom7; false : dom8)}, dom7 = (project_values dom9 dom5 l), dom8 = (project_values dom9 dom6 l) and dom9 = (BoolPartition.gamma Env(m1))
+
+In the case of BoolPartition, when the domain in which the values are projected already contains boolean which value should not change or contains no boolean, it’s necessary to still project into partitions non boolean values of expressions in the relation on variables of the relation. But, which values to project? The choice made was to join values of the expression in every partitions of the first domain with the function gamma, and then project this value to every partition concerned.
+
+
+
+*added constructor /Nde/ for type stm
+type stm = … | Nde of Location.t * Name.t list * Name.t * expr list
+Ast.fprint_stm, Ast.loc_of_stm, Ast.vars_of_stm, Ast.get_main_while_loc, Nn.process_ast : updated
+PrintResults.print, PrintResults.print_invariants, Analyze.analyze : updating body functions and signature functions
+Nde(l, [x;y;z], node1, [a;b;c]) => (x,y,z) = node1(a,b,c);
+The constructor Nde works like statement Asn(_,_,Call(_)) but it allow the assignment of multiple variable at the same time.
+The only way to construct a statement Nde is to translate a lustre code to tiny using lustrev. It can not be construct following parse of a tiny code.
+In a lustre program, a node call we be translated with lustrev, into a statement Nde in Tiny.
+It is not typed because variables assigned have different types, which is impossible to represents in tiny, but lustrev compiler should have already check the correct typing.
+
+
+
+*moved modules /Map/ and /MapInd/ from Location to added file /Results/
+Results : used
+
+
+
+*added modules /MapNode/ and /MapIndNode/ in added file /Results/
+module MapNode = Map.Make (struct type t = Location.t * Name.t let compare = compare end)
+module MapIndNode = Map.Make (struct type t = (Location.t * int * Name.t) let compare = compare end)
+Results : used
+Same maps as Results.Map and Results.MapInd but with the name of the node concerned more.
+Useful to register separately each value associated to a same location in each context (tree of node calls), the name contains the context.
+
+
+
+*added module /Register/ and /ResultRegister/ in added file /Results/
+module type Register =
+  sig
+    module Dom: Relational.Domain
+    type t
+    val empty : t
+    val register : ?unroll:int -> Location.t -> Dom.t -> t -> t
+    val register_subnode : t -> t -> Name.t -> t
+    val find_aopt : Name.t option -> Location.t ->  t -> Dom.t option
+    val get_unrolled_info: Name.t option -> t -> Location.t -> (int * Dom.t) list
+  end
+module ResultRegister (Dom : Relational.Domain) : Register
+Analyze, PrintResults, Main : used
+Use to register analysis results.
+
+Module Dom
+relational abstract domain chosen for the analysis
+
+type t = Dom.t Map.t * Dom.t MapInd.t * Dom.t MapNode.t * Dom.t MapIndNode.t
+type of the register, four maps containing a domain associated to a location
+
+val empty : t
+Analyze : used
+returns an empty register = Map.empty, MapInd.empty, MapNode.empty, MapIndNode.empty
+
+val register : ?unroll:int -> Location.t -> Dom.t -> t -> t
+Analyze : used
+intern function register of function analyze in file Analyze moved and updated to feet with type t
+
+val register_subnode : t -> t -> Name.t -> t
+Analyze : used
+register_subnode r1 r2 name returns r1 in which every values of r2 are set into MapNode and MapIndNode thanks to name
+Function register_subnode works like a merge function to merge results of sub-node analysis to results of node caller analysis.
+examples :
+ r1 = {(l1, dom1)} * {((l1,1), dom2)} * {((l2,n1),dom3)} * {((l2,1,n1),dom4)}  r2 = {(l2,dom5)} * {((l2,1), dom6)} * {} * {}
+ Register.register_subnode r1 r2 n2 = r3 with r3 = {(l1,dom1)} * {((l1,1),dom2)} * {((l2,n1),dom3) ; ((l2,n2),dom5)} * {((l2,1,n1),dom4) ; ((l2,1,n2), dom6)}
+
+ r1 = {(l1, dom1)} * {((l1,1), dom2)} * {((l2,n1),dom3)} * {((l2,1,n1),dom4)}  r2 = {(l2,dom5)} * {((l2,1), dom6)} * {((l3,n2),dom7)} * {((l3,1,n2),dom8)}
+ Register.register_subnode r1 r2 n3 = r3 with r3 = {(l1,dom1)} * {((l1,1),dom2)} * {((l2,n1),dom3) ; ((l3,n2),dom7) ; ((l2,n3), dom5)} * {((l2,1,n1),dom4) ; ((l3,1,n2), dom8) ; ((l2,1,n3),dom6)}
+
+val find_aopt : Name.t option -> Location.t ->  t -> Dom.t option
+PrintResults : used
+find_aopt None l r returns the domain associated to the location l
+find_aopt Some(n) l r returns the domain associated to the location l and the name n
+Function find_aopt works like a find function but the name indicate in which map the find should be done. Without a name, the first map of register r, with a name, the third map of r.
+examples :
+ r = {(l1,dom1)} * mi * {((l2,n), dom2) * mni
+ Results.find_aopt None l1 r = Some (dom1)
+
+ r = {(l1,dom1)} * mi * {((l2,n), dom2) * mni
+ Results.find_aopt Some(n) l2 r = Some (dom2)
+
+ r = {(l1,dom1)} * mi * {((l2,n), dom2) * mni
+ Results.find_aopt None l3 r = None
+
+ r = {(l1,dom1)} * mi * {((l2,n), dom2) * mni
+ Results.find_aopt None l2 r = None
+
+ r = {(l1,dom1)} * mi * {((l2,n), dom2) * mni
+ Results.find_aopt Some(n) l1 r = None
+
+val get_unrolled_info: Name.t option -> t -> Location.t -> (int * Dom.t) list
+PrintResults : used
+get_unrolled_info None r l returns the list of (integer, domains) associated to the location l
+get_unrolled_info Some(n) r l returns the list of (integer, domains) associated to the location l and the name n
+Function get_unrolled_info returns the domain associated to each turn of while loop. With a name, it looks for it in the fourth map of the register, without, in the second.
+examples :
+ r = m * {((l1,1),dom1) ; ((l2,1),dom2) ; ((l1,2),dom3)} * mn * {((l3,1,n1),dom4) ; ((l4,1,n2),dom5) ; ((l3,2,n3),dom6)}
+ Results.get_unrolled_info None r l1 = [(1,dom1);(2,dom3)]
+
+ r = m * {((l1,1),dom1) ; ((l2,1),dom2) ; ((l1,2),dom3)} * mn * {((l4,2,n2),dom4) ; ((l3,1,n1),dom5) ; ((l4,1,n2),dom6) ; ((l3,1,n3),dom7)}
+ Results.get_unrolled_info Some(n1) r l4 = [(1,dom5)]
+
+ r = m * {((l1,1),dom1) ; ((l2,1),dom2) ; ((l1,2),dom3)} * mn * {((l3,2,n2),dom4) ; ((l4,1,n1),dom5) ; ((l3,1,n2),dom6) ; ((l4,1,n3),dom7)}
+ Results.get_unrolled_info Some(n2) r l3 = [(1,dom6);(2,dom4)]
+
+ r = m * {((l1,1),dom1) ; ((l2,1),dom2) ; ((l1,2),dom3)} * mn * {((l4,2,n2),dom4) ; ((l3,1,n1),dom5) ; ((l4,1,n2),dom6) ; ((l3,1,n3),dom7)}
+ Results.get_unrolled_info None r l3 = []
+
+
+
+*added file /utils_node/ containing functions to treat with data sent by lustrev compiler
+
+
+
+*added function /get_env_node_in/ in added file /Utils_node/
+val get_env_node_in : Name.t -> 
+    (Name.t * (Ast.Var.Set.t * Ast.Var.t list * Ast.Var.t list * (Name.t * (Ast.expr * Ast.Var.t) list) list)) list ->
+    Name.t -> Ast.expr list -> Location.t ->
+    Ast.Var.Set.t * Ast.Var.t list * (Name.t * (Ast.expr * Ast.Var.t) list) list
+PrintResults, Utils_node : used
+get_env_node e_id vars_node name args l returns the environment associated to e_id in vars_node with variables of args and external memory variables added, returns also the list of input variables of the node e_id and the map containing the relation between external and internal memory variables associated to each instances of node e_id
+The list of input variables and the map are contained in vars_node associated to e_id.
+example : 
+ env1 = {(x,typx); (y,typy); (mem_int, typmem)}  m = {(sn1,([(mem_ext,(mem_int,typmem))]))}  ins = [(x,typx); (y,typy)]  vn = {(e_id,(env1,ins,outs,m))}  args = [u; (4 +m); 8]
+ get_env_node_in e_id vn n args l = env2, ins, m with env2 = {(x,typx); (y,typy); (mem_int,typmem); (u ^ "_from_args", typx); (m ^ "_from_args", typy); (mem_ext, typmem)}
+
+
+
+*added function /get_rel_in/ in added file /Utils_node/
+val get_rel_in : Ast.expr list -> Ast.Var.t list -> (Name.t * (Ast.expr * Ast.Var.t) list) list ->
+    Name.t -> Name.t -> Location.t -> (Ast.expr * Ast.Var.t) list
+Utils_node : used
+get_rel_in args inputs vars_of_args map name e_id l returns the relational map containing the relation between inputs and args, the relation between variables of args and suffixed variables of args, the relation between external and internal memory variables associated to name and the identity relation for external memory variables
+example :
+ a = [(a / 2)]  ins = [(x,typx)]  map = {(n1,([(g,(p_g,typg))])); (n2,([(h,(p_h,typh))]))}
+ get_rel_in a ins map n1 id l = [(a/ 2, (x,typx)); (a,(a ^ "_from_args", typa); (g,(p_g,typg))]
+
+
+
+*added function /get_env_rel_in/ in added file /Utils_node/
+val get_env_rel_in : Name.t -> 
+    (Name.t * (Ast.Var.Set.t * Ast.Var.t list * Ast.Var.t list * (Name.t * (Ast.expr * Ast.Var.t) list) list)) list ->
+    Name.t -> Ast.expr list -> Location.t -> (Ast.Var.Set.t * (Ast.expr * Ast.Var.t) list)
+get_env_rel_in e_id vars_nodes name args l returns the environment associated to node e_id and the entry relational map
+Function get_env_rel_in simply calls get_env_node_in and get_rel_in then returns both results.
+
+
+
+*added function /get_rel_out/ in added file /Utils_node/
+val get_rel_out : Name.t -> 
+    (Name.t * (Ast.Var.Set.t * Ast.Var.t list * Ast.Var.t list * (Name.t * (Ast.expr * Ast.Var.t) list) list)) list ->
+    Ast.expr list -> Name.t -> Name.t list -> Location.t -> (Ast.expr * Ast.Var.t) list
+get_rel_out e_id vars_node args name l_returned_vars l returns the relational map containing the relation between returned values and assigned variables, between suffixed variables of args and variables of args and the relation between internal and external memory variables associated to name

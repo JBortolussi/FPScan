@@ -1,0 +1,28 @@
+real __result__;
+real _x0;
+real _x1;
+real _x2;
+real _x3;
+real _x4;
+real _x5;
+real _x6;
+real _x7;
+real a;
+real b;
+real x1;
+real x2;
+
+x2 = rand_real(-5., 5.);
+x1 = rand_real(-5., 5.);
+
+_x7 = 7.;
+_x6 = (x2 * x2);
+_x5 = (x1 + _x6);
+b = (_x5 - _x7);
+_x4 = 11.;
+_x3 = (x1 * x1);
+_x2 = (_x3 + x2);
+a = (_x2 - _x4);
+_x1 = (b * b);
+_x0 = (a * a);
+__result__ = (_x0 + _x1);

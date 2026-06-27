@@ -1,0 +1,11 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = y
+  - []
+- - File "none", line 1, characters 1-0
+  - x = Rand (1, 67108864)
+  - []
+- - File "none", line 1, characters 1-0
+  - y = Rand (1, 10)
+  - []

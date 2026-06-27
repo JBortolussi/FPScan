@@ -1,0 +1,48 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_8 = s - c
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = s * _x_4
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = _x_1 + c
+  - - None
+- - File "none", line 1, characters 1-0
+  - c = Rand (471/100, 489/100)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = a + b
+  - - None
+- - File "none", line 1, characters 1-0
+  - s = _x_2 / _x_3
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_10 = sqrt (_x_9)
+  - - None
+- - File "none", line 1, characters 1-0
+  - b = Rand (471/100, 489/100)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = s - a
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = 2
+  - - None
+- - File "none", line 1, characters 1-0
+  - a = Rand (9, 9)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = s - b
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_10
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_7 = _x_5 * _x_6
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_9 = _x_7 * _x_8
+  - - None
+sanity_check: true
+time: 1.3572151220000002

@@ -1,0 +1,110 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_3 = _x_2 * frequency
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = _x_1 * pi
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_18 = _x_17 * frequency
+  - - None
+- - File "none", line 1, characters 1-0
+  - impedance_re = resistance
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_20 = _x_19 + theta
+  - - absorption _x_19 theta
+    - absorption theta _x_19
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - current_im = _x_9 / denom
+  - - None
+- - File "none", line 1, characters 1-0
+  - denom = _x_4 + _x_5
+  - - absorption _x_5 _x_4
+    - None
+- - File "none", line 1, characters 1-0
+  - theta = _x_15
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_12 = _x_10 + _x_11
+  - - absorption _x_11 _x_10
+    - cancellation
+    - absorption _x_10 _x_11
+- - File "none", line 1, characters 1-0
+  - _x_6 = maxVoltage * impedance_re
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_11 = current_im * current_im
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = maxVoltage * impedance_im
+  - - None
+- - File "none", line 1, characters 1-0
+  - inductance = Rand (1/1000, 1/250)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = impedance_im * impedance_im
+  - - None
+- - File "none", line 1, characters 1-0
+  - impedance_im = _x_3 * inductance
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = impedance_re * impedance_re
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_9 = - _x_8
+  - - None
+- - File "none", line 1, characters 1-0
+  - frequency = Rand (1, 100)
+  - - None
+- - File "none", line 1, characters 1-0
+  - resistance = Rand (1, 50)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_21 = cos (_x_20)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_10 = current_re * current_re
+  - - None
+- - File "none", line 1, characters 1-0
+  - maxCurrent = _x_13
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_16 = 2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_13 = sqrt (_x_12)
+  - - None
+- - File "none", line 1, characters 1-0
+  - pi = 314159265359/100000000000
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_15 = atan (_x_14)
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = maxCurrent * _x_21
+  - - None
+- - File "none", line 1, characters 1-0
+  - current_re = _x_6 / denom
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_17 = _x_16 * pi
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = 2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_19 = _x_18 * t
+  - - None
+- - File "none", line 1, characters 1-0
+  - maxVoltage = Rand (1, 12)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_14 = current_im / current_re
+  - - None
+- - File "none", line 1, characters 1-0
+  - t = Rand (0, 300)
+  - - None
+sanity_check: true
+time: 4.191479437

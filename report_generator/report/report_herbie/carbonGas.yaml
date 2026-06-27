@@ -1,0 +1,50 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_2 + _x_12
+  - - None
+    - absorption _x_12 _x_2
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_12 = _x_10 + _x_11
+  - - None
+    - None
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_11 = -1494500
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_10 = _x_6 * _x_9
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_9 = _x_7 / _x_8
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_8 = v * v
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_7 = 1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_6 = _x_4 + _x_5
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = -171227/10
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_4 = v * _x_3
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_3 = 401000
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = v * _x_1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_1 = 35000000
+  - []
+- - File "none", line 1, characters 1-0
+  - v = Rand (1/10, 1/2)
+  - []

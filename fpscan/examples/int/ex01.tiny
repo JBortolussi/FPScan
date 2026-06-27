@@ -1,0 +1,10 @@
+/* les commentaires
+ * sont au format C. */
+int  y,x,z;
+x = rand_int(0,10);
+y = 42;
+z = 50 - y;
+if (x>0) {
+  x = x - 2;
+  y = y + 4;
+} 

@@ -1,0 +1,10 @@
+int y, z;
+int b, c;
+y = 1;
+while (true) {
+      if (a<=1) {
+         b = 1;
+      }
+      else {
+         c = a-1;
+         c = 

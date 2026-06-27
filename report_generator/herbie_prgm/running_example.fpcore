@@ -1,0 +1,1 @@
+(FPCore (x y) :herbie-status imp-start :herbie-time 1602.2939453125 :herbie-error-input ((256 9.367336951250252) (8000 9.539472224293373)) :herbie-error-output ((256 0) (8000 0)) :name "simple" :precision binary32 :pre (and (and (<= 1.0 x) (<= x 67108864.0)) (and (<= 1.0 y) (<= y 10.0))) y)

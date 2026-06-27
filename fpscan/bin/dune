@@ -1,0 +1,53 @@
+(executable
+ (modes (best exe))
+ (modules Main)
+ (public_name tiny)
+ (name main)
+ (libraries tiny)
+ (flags
+  (:standard -w -warn-error))
+ (preprocess
+  (pps ppx_inline_test)))
+
+(executable
+ (modes (best exe))
+ (modules Test_domain)
+ (name test_domain)
+ (libraries tiny)
+ (flags
+  (:standard -w -warn-error))
+ (preprocess
+  (pps ppx_inline_test)))
+
+(executable
+ (modes (best exe))
+ (modules Main_nn)
+ (public_name tiny-nn)
+ (name main_nn)
+ (libraries tiny)
+ (flags
+  (:standard -w -warn-error))
+ (preprocess
+  (pps ppx_inline_test)))
+
+(executable
+ (modes (best exe))
+ (modules Main_fpscan)
+ (public_name tiny-fpscan)
+ (name main_fpscan)
+ (libraries tiny yaml.unix z3)
+ (flags
+  (:standard -w -A))
+ (preprocess
+  (pps ppx_inline_test)))
+
+(executable
+ (modes (best exe))
+ (modules Main_fpcore_to_C)
+ (public_name fpcore-to-C)
+ (name main_fpcore_to_C)
+ (libraries tiny)
+ (flags
+  (:standard -w -A))
+ (preprocess
+  (pps ppx_inline_test)))

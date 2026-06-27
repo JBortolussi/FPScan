@@ -1,0 +1,11 @@
+(FPCore
+ (x)
+ :name
+ "squareRoot3"
+ :cite
+ (darulova-kuncak-2014)
+ :pre
+ (< 0 x 10)
+ :rosa-ensuring
+ 1/10000000000
+ (if (< x 1/100000) (+ 1 (* 1/2 x)) (sqrt (+ 1 x))))

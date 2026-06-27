@@ -1,0 +1,89 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = v * _x_21
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_21 = _x_4 / _x_20
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_20 = _x_10 + _x_19
+  - - absorption _x_10 _x_19
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_19 = _x_14 * _x_18
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_18 = _x_16 + _x_17
+  - - absorption _x_16 _x_17
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_17 = 1657/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_16 = T * _x_15
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_15 = 3/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_14 = _x_12 + _x_13
+  - - absorption _x_12 _x_13
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_13 = 1657/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_12 = T * _x_11
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_11 = 3/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_10 = u * _x_9
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_9 = _x_5 + _x_8
+  - - None
+    - absorption _x_8 _x_5
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = _x_7 + u
+  - - absorption _x_7 u
+    - absorption u _x_7
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_7 = T * _x_6
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_6 = 6/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_5 = 3314/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_4 = _x_2 + _x_3
+  - - absorption _x_2 _x_3
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = -1657/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = T * _x_1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_1 = -3/5
+  - []
+- - File "none", line 1, characters 1-0
+  - T = Rand (-30, 50)
+  - []
+- - File "none", line 1, characters 1-0
+  - u = Rand (-100, 100)
+  - []
+- - File "none", line 1, characters 1-0
+  - v = Rand (20, 20000)
+  - []

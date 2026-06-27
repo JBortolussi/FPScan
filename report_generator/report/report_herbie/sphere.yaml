@@ -1,0 +1,42 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_7 + x
+  - - absorption _x_7 x
+    - absorption x _x_7
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_7 = _x_1 * _x_6
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_6 = _x_5 + r
+  - - absorption _x_5 r
+    - absorption r _x_5
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_5 = r * _x_4
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_4 = _x_2 * _x_3
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_3 = lon * lon
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = -1/2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_1 = sin (lat)
+  - []
+- - File "none", line 1, characters 1-0
+  - lat = Rand (-392699/250000, 392699/250000)
+  - []
+- - File "none", line 1, characters 1-0
+  - lon = Rand (-62831853/20000000, 62831853/20000000)
+  - []
+- - File "none", line 1, characters 1-0
+  - r = Rand (0, 10)
+  - []
+- - File "none", line 1, characters 1-0
+  - x = Rand (-10, 10)
+  - []

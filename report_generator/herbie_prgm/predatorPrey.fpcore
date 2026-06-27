@@ -1,0 +1,1 @@
+(FPCore (x) :herbie-status ex-start :herbie-time 4259.10107421875 :herbie-error-input ((256 0.4375) (8000 0.42179981250360593)) :herbie-error-output ((256 0.3795700195368841) (8000 0.3669297000057694)) :name "predatorPrey" :precision binary64 :pre (and (<= 0.1 x) (<= x 0.3)) (/ (* x 4.0) (fma x 0.8116224332440549 (/ 1.0 x))))

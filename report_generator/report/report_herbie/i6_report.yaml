@@ -1,0 +1,18 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_1 = x * y
+  - - None
+- - File "none", line 1, characters 1-0
+  - x = Rand (1/10, 10)
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_2
+  - - None
+- - File "none", line 1, characters 1-0
+  - y = Rand (-5, 5)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = sin (_x_1)
+  - - None
+sanity_check: true
+time: 0.00984193

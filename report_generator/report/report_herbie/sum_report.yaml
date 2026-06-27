@@ -1,0 +1,18 @@
+report:
+- - File "none", line 1, characters 1-0
+  - x1 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = x2 + x0
+  - - None
+- - File "none", line 1, characters 1-0
+  - x0 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x2 = Rand (1, 2)
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = x1 + _x_1
+  - - None
+sanity_check: true
+time: 0.045259980000000005

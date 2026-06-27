@@ -1,0 +1,71 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_12 = _x_11 - x4
+  - - cancellation
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_7 = _x_5 - _x_6
+  - - cancellation
+    - None
+- - File "none", line 1, characters 1-0
+  - x2 = Rand (4, 159/25)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_13 = _x_12 + x5
+  - - cancellation
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = _x_1 + _x_2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_11 = _x_10 + x3
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = x2 * x5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_15 = x1 * _x_14
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = x3 * x6
+  - - None
+- - File "none", line 1, characters 1-0
+  - x6 = Rand (4, 159/25)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_10 = _x_9 + x2
+  - - cancellation
+    - None
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_7 + _x_15
+  - - absorption _x_7 _x_15
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_9 = - x1
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = _x_3 - _x_4
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = x5 * x6
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = x2 * x3
+  - - None
+- - File "none", line 1, characters 1-0
+  - x1 = Rand (4, 159/25)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_14 = _x_13 + x6
+  - - None
+- - File "none", line 1, characters 1-0
+  - x3 = Rand (4, 159/25)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x4 = Rand (4, 159/25)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x5 = Rand (4, 159/25)
+  - - None
+sanity_check: true
+time: 316.07854610500004

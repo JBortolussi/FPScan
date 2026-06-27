@@ -1,0 +1,7 @@
+bool b;
+int x;
+x = 0;
+b = rand_bool();
+while (b) {
+  x = x + 1;
+}

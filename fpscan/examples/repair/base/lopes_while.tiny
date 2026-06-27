@@ -1,0 +1,19 @@
+
+real L1, L2, L3, L4, L5, L6, L7, L8, L9, L10, L11, n, r, d;
+
+L1 = rand_real(1., 5000.);
+L2 = rand_real(100., 100000.);
+L3 = rand_real(0., 0.);
+L11 = rand_real(0., 0.);
+L6 = 0.5;
+n = 0.;
+r = 0.;
+d = 1.0;
+
+while (n < 21.) {
+    L4 = L1 + L3;
+    L5 = L4 * L6;
+    L10 = L2 - L11;
+    r = L5 + L10;
+    n = n + d;
+}

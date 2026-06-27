@@ -1,0 +1,16 @@
+
+real __result__;
+real _x0;
+real x0;
+real x1;
+real x2;
+
+x0 = rand_real(8388608.0, 16777216.0);
+x1 = rand_real(8388608.0, 16777216.0);
+x2 = rand_real(0.25, 0.5);
+
+_x0 = (x0 - x1);
+__result__ = (x2 + _x0);
+
+
+

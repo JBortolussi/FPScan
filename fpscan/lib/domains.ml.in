@@ -1,0 +1,49 @@
+(* Abstract domains which can be used for the analyses. *)
+let available_domains : (module Relational.Domain) list =
+  [
+
+
+  (* Abstract domain used for the analyses. *)
+    (module (Relational.MakeRelational (Dummy)));
+    (module (Relational.MakeRelational (Kildall.Int)));
+    (module (Relational.MakeRelational (Kildall.Real)));
+    (module (Relational.MakeRelational (Parity)));
+    (module (Relational.MakeRelational (Sign.Real)));
+    (module (Relational.MakeRelational (Sign.Int)));
+
+    (module (Relational.MakeRelational (Intervals.Int)));
+    (module (Relational.MakeRelational (Intervals.Rat)));
+    (module (Relational.MakeRelational (Intervals.Double)));
+    (module (Relational.MakeRelational (Intervals.DoubleRnd)));
+
+    (module (Relational.MakeRelational (Smallfloat.B16)));
+
+    (module (Relational.MakeRelational (Reductions.Sign_Parity)));
+
+    (module (Relational.MakeRelational (Intervals_errors.Main)));
+
+    (module (Relational.MakeRelational (Affine.Main)));
+    (module (Relational.MakeRelational (Float_err.IntervalF16Error)));
+    (module (Relational.MakeRelational (Float_err.IntervalF32Error)));
+(*    (module (Relational.MakeRelational (Poly_mute.Main))); *)
+
+  (* To be able to use this last two domains, you have to install the Apron
+   * library and change the flag "actually_use_apron" in myocamlbuild.ml. *)
+  (* ; *)
+   (module ApronWrapper.Polka);
+   (module ApronWrapper.Oct);
+   (module ApronWrapper.Box);
+   @BDDAPRON_DOMAINS@
+     
+       
+  ]
+
+
+let get_name d = let module D = (val d : Relational.Domain) in D.name
+
+
+let available_domains_str =
+  match List.map get_name available_domains with
+  | [] -> "(compiled without any abstract domain)"
+  | d :: l -> "(" ^ d ^ " (default), " ^ String.concat ", " l ^ ")"
+

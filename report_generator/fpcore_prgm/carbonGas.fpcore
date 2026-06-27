@@ -1,0 +1,19 @@
+(FPCore
+ (v)
+ :name
+ "carbonGas"
+ :cite
+ (darulova-kuncak-2014 solovyev-et-al-2015)
+ :fpbench-domain
+ science
+ :precision
+ binary64
+ :pre
+ (<= 1/10 v 1/2)
+ (let ((p 35000000)
+       (a 401/1000)
+       (b 427/10000000)
+       (t 300)
+       (n 1000)
+       (k 13806503/1000000000000000000000000000000))
+   (- (* (+ p (* (* a (/ n v)) (/ n v))) (- v (* n b))) (* (* k n) t))))

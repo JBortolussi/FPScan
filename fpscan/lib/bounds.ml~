@@ -1,0 +1,1 @@
+type t = Scalar.t * Scalar.t

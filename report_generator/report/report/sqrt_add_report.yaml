@@ -1,0 +1,27 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_2 = 1
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = 1
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_1 / _x_6
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = x + _x_2
+  - - None
+- - File "none", line 1, characters 1-0
+  - x = Rand (1, 1000)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = _x_4 + _x_5
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = sqrt (_x_3)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_5 = sqrt (x)
+  - - None
+sanity_check: true
+time: 0.162670119

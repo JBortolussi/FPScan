@@ -1,0 +1,28 @@
+(lang dune 2.5)
+
+(name tiny)
+(version 87baed3-dirty)
+(using menhir 2.0)
+(formatting disabled)
+
+(generate_opam_files true)
+
+(license GPL-3.0-or-later)
+(authors "************")
+(maintainers "******")
+
+
+(package 
+ (name tiny)
+ (version 0.1)
+ (synopsis "Tiny a very simple static analyzer for imperative code")
+ (depends
+  (menhir (>= 20200123))
+  (dune (>= 2))
+  (zarith (>= 1))
+  (apron (>= 0.9))
+  (ppx_inline_test (>= 0.13))
+  (csv (>= 2.4))
+  (conf-autoconf (>= 0.1))
+ )
+)

@@ -1,0 +1,20 @@
+(FPCore
+ (t resistance frequency inductance maxVoltage)
+ :name
+ "instantaneousCurrent"
+ :pre
+ (and (<= 0 t 300)
+      (<= 1 resistance 50)
+      (<= 1 frequency 100)
+      (<= 1/1000 inductance 1/250)
+      (<= 1 maxVoltage 12))
+ (let* ((pi 314159265359/100000000000)
+        (impedance_re resistance)
+        (impedance_im (* (* (* 2 pi) frequency) inductance))
+        (denom (+ (* impedance_re impedance_re) (* impedance_im impedance_im)))
+        (current_re (/ (* maxVoltage impedance_re) denom))
+        (current_im (/ (- (* maxVoltage impedance_im)) denom))
+        (maxCurrent
+         (sqrt (+ (* current_re current_re) (* current_im current_im))))
+        (theta (atan (/ current_im current_re))))
+   (* maxCurrent (cos (+ (* (* (* 2 pi) frequency) t) theta)))))

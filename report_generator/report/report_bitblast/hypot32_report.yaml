@@ -1,0 +1,24 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_1 = x1 * x1
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = _x_1 + _x_2
+  - - None
+- - File "none", line 1, characters 1-0
+  - x1 = Rand (1, 100)
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_4
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = x2 * x2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = sqrt (_x_3)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x2 = Rand (1, 100)
+  - - None
+sanity_check: true
+time: 0.663722502

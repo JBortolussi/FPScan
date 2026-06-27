@@ -1,0 +1,72 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = v * _x_16
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_16 = _x_4 / _x_15
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_15 = _x_9 * _x_14
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_14 = _x_10 + _x_13
+  - - None
+    - absorption _x_13 _x_10
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_13 = _x_12 + u
+  - - absorption _x_12 u
+    - absorption u _x_12
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_12 = _x_11 * T
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_11 = 3/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_10 = 1657/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_9 = _x_5 + _x_8
+  - - None
+    - absorption _x_8 _x_5
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = _x_7 + u
+  - - absorption _x_7 u
+    - absorption u _x_7
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_7 = _x_6 * T
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_6 = 3/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_5 = 1657/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_4 = _x_2 + _x_3
+  - - absorption _x_2 _x_3
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = -1657/5
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = T * _x_1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_1 = -3/5
+  - []
+- - File "none", line 1, characters 1-0
+  - T = Rand (-50, 30)
+  - []
+- - File "none", line 1, characters 1-0
+  - u = Rand (-30, 120)
+  - []
+- - File "none", line 1, characters 1-0
+  - v = Rand (320, 20300)
+  - []

@@ -1,0 +1,52 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_1 = x1 * x1
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_7 + _x_8
+  - - absorption _x_7 _x_8
+    - absorption _x_8 _x_7
+    - cancellation
+- - File "none", line 1, characters 1-0
+  - _x_5 = x1 + _x_4
+  - - cancellation
+    - absorption x1 _x_4
+    - absorption _x_4 x1
+- - File "none", line 1, characters 1-0
+  - _x_6 = 7
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = 11
+  - - None
+- - File "none", line 1, characters 1-0
+  - b = _x_5 - _x_6
+  - - absorption _x_5 _x_6
+    - cancellation
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_7 = a * a
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_2 = _x_1 + x2
+  - - cancellation
+    - absorption _x_1 x2
+    - absorption x2 _x_1
+- - File "none", line 1, characters 1-0
+  - a = _x_2 - _x_3
+  - - cancellation
+    - absorption _x_2 _x_3
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = x2 * x2
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = b * b
+  - - None
+- - File "none", line 1, characters 1-0
+  - x2 = Rand (-5, 5)
+  - - None
+- - File "none", line 1, characters 1-0
+  - x1 = Rand (-5, 5)
+  - - None
+sanity_check: true
+time: 0.064935448

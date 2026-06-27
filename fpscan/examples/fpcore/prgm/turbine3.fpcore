@@ -1,0 +1,17 @@
+(FPCore
+ (v w r)
+ :name
+ "turbine3"
+ :cite
+ (darulova-kuncak-2014 solovyev-et-al-2015)
+ :fpbench-domain
+ controls
+ :precision
+ binary64
+ :pre
+ (and (<= -9/2 v -3/10) (<= 2/5 w 9/10) (<= 19/5 r 39/5))
+ (-
+  (-
+   (- 3 (/ 2 (* r r)))
+   (/ (* (* 1/8 (+ 1 (* 2 v))) (* (* (* w w) r) r)) (- 1 v)))
+  1/2))

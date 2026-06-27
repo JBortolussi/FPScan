@@ -1,0 +1,10 @@
+(FPCore
+ (x y)
+ :name
+ "carthesianToPolar__theta"
+ :pre
+ (and (<= 1 x 100) (<= 1 y 100))
+ :spec
+ (* (atan2 y x) (/ 180 PI))
+ (let ((pi 314159265359/100000000000) (radiant (atan (/ y x))))
+   (* radiant (/ 180 pi))))

@@ -1,0 +1,70 @@
+sanity_check: true
+report:
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_11 + _x_16
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_16 = _x_12 + _x_15
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_15 = _x_13 / _x_14
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_14 = r * r
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_13 = 2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_12 = -3/2
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_11 = _x_8 * _x_10
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_10 = r * _x_9
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_9 = w * w
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_8 = _x_5 / _x_7
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_7 = v + _x_6
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = -1
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_5 = _x_4 * r
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_4 = _x_2 + _x_3
+  - - None
+    - None
+    - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = 3/8
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_2 = _x_1 * v
+  - []
+- - File "none", line 1, characters 1-0
+  - _x_1 = -1/4
+  - []
+- - File "none", line 1, characters 1-0
+  - r = Rand (19/5, 39/5)
+  - []
+- - File "none", line 1, characters 1-0
+  - v = Rand (-9/2, -3/10)
+  - []
+- - File "none", line 1, characters 1-0
+  - w = Rand (2/5, 9/10)
+  - []

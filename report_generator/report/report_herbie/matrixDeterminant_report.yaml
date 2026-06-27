@@ -1,0 +1,91 @@
+report:
+- - File "none", line 1, characters 1-0
+  - _x_5 = _x_2 + _x_4
+  - - cancellation
+    - absorption _x_2 _x_4
+    - absorption _x_4 _x_2
+- - File "none", line 1, characters 1-0
+  - _x_9 = a * f
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_16 = _x_10 + _x_15
+  - - absorption _x_10 _x_15
+    - cancellation
+    - absorption _x_15 _x_10
+- - File "none", line 1, characters 1-0
+  - _x_2 = _x_1 * i
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_15 = _x_12 + _x_14
+  - - absorption _x_12 _x_14
+    - cancellation
+    - absorption _x_14 _x_12
+- - File "none", line 1, characters 1-0
+  - _x_11 = b * d
+  - - None
+- - File "none", line 1, characters 1-0
+  - __result__ = _x_8 - _x_16
+  - - absorption _x_16 _x_8
+    - cancellation
+    - absorption _x_8 _x_16
+- - File "none", line 1, characters 1-0
+  - c = Rand (-10, 10)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_13 = e * c
+  - - None
+- - File "none", line 1, characters 1-0
+  - i = Rand (-10, 10)
+  - - None
+- - File "none", line 1, characters 1-0
+  - e = Rand (-10, 10)
+  - - None
+- - File "none", line 1, characters 1-0
+  - b = Rand (-10, 10)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_10 = h * _x_9
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_4 = _x_3 * g
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_8 = _x_5 + _x_7
+  - - cancellation
+    - absorption _x_5 _x_7
+    - absorption _x_7 _x_5
+- - File "none", line 1, characters 1-0
+  - _x_7 = _x_6 * h
+  - - None
+- - File "none", line 1, characters 1-0
+  - d = Rand (-10, 10)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_1 = a * e
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_3 = b * f
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_6 = c * d
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_12 = i * _x_11
+  - - None
+- - File "none", line 1, characters 1-0
+  - f = Rand (-10, 10)
+  - - None
+- - File "none", line 1, characters 1-0
+  - _x_14 = g * _x_13
+  - - None
+- - File "none", line 1, characters 1-0
+  - g = Rand (-10, 10)
+  - - None
+- - File "none", line 1, characters 1-0
+  - a = Rand (-10, 10)
+  - - None
+- - File "none", line 1, characters 1-0
+  - h = Rand (-10, 10)
+  - - None
+sanity_check: true
+time: 0.08455554700000001
