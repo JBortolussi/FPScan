@@ -110,7 +110,7 @@ module MakeConstraintGenerator
       match expr with
       | Cst (_, _) | Rand (_, _) ->
           (* nsb of the variable is equal to precision *)
-          LOp (Eq, Nsb z, P z)
+          LOp (Geq, Nsb z, P z)
       | Var x ->
           (* The two var *)
           LOp (Eq, Var z, Var x)
